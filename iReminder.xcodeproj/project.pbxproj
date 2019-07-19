@@ -106,6 +106,7 @@
 				E9B677C922E09EF500D0CAE4 /* Sources */,
 				E9B677CA22E09EF500D0CAE4 /* Frameworks */,
 				E9B677CB22E09EF500D0CAE4 /* Resources */,
+				6707DFB6305A1E3807522515 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +169,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6707DFB6305A1E3807522515 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iReminder/Pods-iReminder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iReminder/Pods-iReminder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iReminder/Pods-iReminder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B96714EAE00A85A87E3F79E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
