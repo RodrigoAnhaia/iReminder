@@ -15,6 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+//        if !UserDefaults.standard.bool(forKey: "didSee") {
+//            UserDefaults.standard.set(true, forKey: "didSee")
+//            
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let viewController = storyboard.instantiateViewController(withIdentifier: "tutorial")
+//            self.window?.rootViewController = viewController
+//            self.window?.makeKeyAndVisible()
+//        }
+        
         // Override point for customization after application launch.
         return true
     }
