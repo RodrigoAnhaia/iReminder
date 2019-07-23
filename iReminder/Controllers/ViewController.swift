@@ -7,39 +7,41 @@
 //
 
 import UIKit
-import Charts
+import UICircularProgressRing
 
 class ViewController: UIViewController {
 
     var water = WaterHK()
 
+    @IBOutlet weak var progressRing: UICircularProgressRing!
     
-    @IBOutlet weak var pieChart: PieChartView!
-    
-    @IBOutlet weak var iosStepper: UIStepper!
-    @IBOutlet weak var blankStepper: UIStepper!
-    
-    var iosDataEntry = PieChartDataEntry(value: 0)
-    var blankDataEntry = PieChartDataEntry(value: 0)
-
-    var numberOfDownloadsDataEntries = [PieChartDataEntry]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressRing.value = 0
         
-        pieChart.chartDescription?.text = "Data Wather"
-        
-        iosDataEntry.value = iosStepper.value
-        iosDataEntry.label = "IOS"
-        
-        blankDataEntry.value = blankStepper.value
-        blankDataEntry.label = "Vazio"
-        
-        
-        numberOfDownloadsDataEntries = [iosDataEntry, blankDataEntry]
-        
-        updateChartData()
-        
+    }
+    
+    @IBAction func startAnimation(_ sender: UICircularProgressRing) {
+        progressRing.startProgress(to: 100, duration: 10.0) {
+            print("Done animating!")
+            // Do anything your heart desires...
+        }
+    }
+    
+    @IBAction func pauseAnimation(_ sender: UICircularProgressRing) {
+        progressRing.pauseProgress()
+        print("paused")
+    }
+    
+    @IBAction func continueAnimation(_ sender: UICircularProgressRing) {
+        progressRing.continueProgress()
+        print("continued..")
+    }
+    
+    @IBAction func resetProgress(_ sender: UICircularProgressRing) {
+        progressRing.resetProgress()
+        print("reset")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,36 +53,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
-    
-    
 
-    @IBAction func iosChanger(_ sender: UIStepper) {
-        iosDataEntry.value = sender.value
-        updateChartData()
-        
-        
-    }
-    
-    @IBAction func blankChanger(_ sender: UIStepper) {
-        blankDataEntry.value = sender.value
-        updateChartData()
-        
-        
-    }
-    
-    func updateChartData() {
-        
-        let chartDataSet = PieChartDataSet(entries: numberOfDownloadsDataEntries,label: nil)
-        let chartData = PieChartData(dataSet: chartDataSet)
-        
-        let colors = [UIColor(cgColor: #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)), UIColor(cgColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))]
-        chartDataSet.colors = colors as! [NSUIColor]
-        
-        pieChart.data = chartData
-        
-    }
-    
 }
 

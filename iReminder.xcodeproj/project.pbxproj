@@ -11,6 +11,7 @@
 		9E6F14AA22E5DE3C0019BBD1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */; };
 		9EA380AC22E734980021C9A2 /* ButtonGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA380AB22E734980021C9A2 /* ButtonGradient.swift */; };
 		B4C851762A102FB9057CA36F /* Pods_iReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837A0DC95EED9BF2BA3FD3CE /* Pods_iReminder.framework */; };
+		E934EE8222E7852500D9A0C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */; };
 		E9B677D122E09EF500D0CAE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B677D022E09EF500D0CAE4 /* AppDelegate.swift */; };
 		E9B677D322E09EF500D0CAE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B677D222E09EF500D0CAE4 /* ViewController.swift */; };
 		E9B677D622E09EF500D0CAE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B677D422E09EF500D0CAE4 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		9EA380AB22E734980021C9A2 /* ButtonGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGradient.swift; sourceTree = "<group>"; };
 		BD63349DE4B577D6FFA5B2A0 /* Pods-iReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iReminder.release.xcconfig"; path = "Target Support Files/Pods-iReminder/Pods-iReminder.release.xcconfig"; sourceTree = "<group>"; };
+		E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E9B677CD22E09EF500D0CAE4 /* iReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B677D022E09EF500D0CAE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9B677D222E09EF500D0CAE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +99,6 @@
 				E9B677D722E09EF700D0CAE4 /* Assets.xcassets */,
 				E9B677D922E09EF700D0CAE4 /* LaunchScreen.storyboard */,
 				E9B677DC22E09EF700D0CAE4 /* Info.plist */,
-				9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */,
 				9EA380AB22E734980021C9A2 /* ButtonGradient.swift */,
 			);
 			path = iReminder;
@@ -115,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				E9B677D222E09EF500D0CAE4 /* ViewController.swift */,
+				9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */,
+				E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				9EA380AC22E734980021C9A2 /* ButtonGradient.swift in Sources */,
 				9E6F14AA22E5DE3C0019BBD1 /* TutorialViewController.swift in Sources */,
 				E9B677D122E09EF500D0CAE4 /* AppDelegate.swift in Sources */,
+				E934EE8222E7852500D9A0C2 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

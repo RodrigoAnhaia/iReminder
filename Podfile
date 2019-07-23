@@ -6,6 +6,6 @@ target 'iReminder' do
   use_frameworks!
 
   # Pods for iReminder
-  pod 'Charts'
+  pod 'UICircularProgressRing'
 
 end
