@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9E34988B22E1D861001476A4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E34988A22E1D861001476A4 /* HealthKit.framework */; };
+		9E6F14AA22E5DE3C0019BBD1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */; };
+		9EA380AC22E734980021C9A2 /* ButtonGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA380AB22E734980021C9A2 /* ButtonGradient.swift */; };
 		B4C851762A102FB9057CA36F /* Pods_iReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837A0DC95EED9BF2BA3FD3CE /* Pods_iReminder.framework */; };
 		E9B677D122E09EF500D0CAE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B677D022E09EF500D0CAE4 /* AppDelegate.swift */; };
 		E9B677D322E09EF500D0CAE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B677D222E09EF500D0CAE4 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 		9353B237F73B83B5E09D6228 /* Pods-iReminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iReminder.debug.xcconfig"; path = "Target Support Files/Pods-iReminder/Pods-iReminder.debug.xcconfig"; sourceTree = "<group>"; };
 		9E34988622E1D69C001476A4 /* iReminder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iReminder.entitlements; sourceTree = "<group>"; };
 		9E34988A22E1D861001476A4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		9EA380AB22E734980021C9A2 /* ButtonGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGradient.swift; sourceTree = "<group>"; };
 		BD63349DE4B577D6FFA5B2A0 /* Pods-iReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iReminder.release.xcconfig"; path = "Target Support Files/Pods-iReminder/Pods-iReminder.release.xcconfig"; sourceTree = "<group>"; };
 		E9B677CD22E09EF500D0CAE4 /* iReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B677D022E09EF500D0CAE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +54,6 @@
 				9353B237F73B83B5E09D6228 /* Pods-iReminder.debug.xcconfig */,
 				BD63349DE4B577D6FFA5B2A0 /* Pods-iReminder.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +94,8 @@
 				E9B677D722E09EF700D0CAE4 /* Assets.xcassets */,
 				E9B677D922E09EF700D0CAE4 /* LaunchScreen.storyboard */,
 				E9B677DC22E09EF700D0CAE4 /* Info.plist */,
+				9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */,
+				9EA380AB22E734980021C9A2 /* ButtonGradient.swift */,
 			);
 			path = iReminder;
 			sourceTree = "<group>";
@@ -216,6 +221,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B677D322E09EF500D0CAE4 /* ViewController.swift in Sources */,
+				9EA380AC22E734980021C9A2 /* ButtonGradient.swift in Sources */,
+				9E6F14AA22E5DE3C0019BBD1 /* TutorialViewController.swift in Sources */,
 				E9B677D122E09EF500D0CAE4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

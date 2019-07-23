@@ -39,6 +39,18 @@ class ViewController: UIViewController {
         
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !UserDefaults.standard.bool(forKey: "didSee") {
+            UserDefaults.standard.set(true, forKey: "didSee")
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "tutorial")
+           present(viewController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func iosChanger(_ sender: UIStepper) {
         iosDataEntry.value = sender.value
         updateChartData()
