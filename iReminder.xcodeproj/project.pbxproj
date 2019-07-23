@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		E9B677D622E09EF500D0CAE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B677D422E09EF500D0CAE4 /* Main.storyboard */; };
 		E9B677D822E09EF700D0CAE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B677D722E09EF700D0CAE4 /* Assets.xcassets */; };
 		E9B677DB22E09EF700D0CAE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B677D922E09EF700D0CAE4 /* LaunchScreen.storyboard */; };
+		E9F2A28322E5E7D8005E062D /* WaterHK.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2A28222E5E7D8005E062D /* WaterHK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E9B677D722E09EF700D0CAE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9B677DA22E09EF700D0CAE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9B677DC22E09EF700D0CAE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F2A28222E5E7D8005E062D /* WaterHK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterHK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,6 @@
 				9353B237F73B83B5E09D6228 /* Pods-iReminder.debug.xcconfig */,
 				BD63349DE4B577D6FFA5B2A0 /* Pods-iReminder.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,15 +85,32 @@
 		E9B677CF22E09EF500D0CAE4 /* iReminder */ = {
 			isa = PBXGroup;
 			children = (
+				E9F2A28122E5E75B005E062D /* Controllers */,
+				E9F2A28022E5E753005E062D /* Helpers */,
 				9E34988622E1D69C001476A4 /* iReminder.entitlements */,
 				E9B677D022E09EF500D0CAE4 /* AppDelegate.swift */,
-				E9B677D222E09EF500D0CAE4 /* ViewController.swift */,
 				E9B677D422E09EF500D0CAE4 /* Main.storyboard */,
 				E9B677D722E09EF700D0CAE4 /* Assets.xcassets */,
 				E9B677D922E09EF700D0CAE4 /* LaunchScreen.storyboard */,
 				E9B677DC22E09EF700D0CAE4 /* Info.plist */,
 			);
 			path = iReminder;
+			sourceTree = "<group>";
+		};
+		E9F2A28022E5E753005E062D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E9F2A28222E5E7D8005E062D /* WaterHK.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E9F2A28122E5E75B005E062D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9B677D222E09EF500D0CAE4 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,7 +124,7 @@
 				E9B677C922E09EF500D0CAE4 /* Sources */,
 				E9B677CA22E09EF500D0CAE4 /* Frameworks */,
 				E9B677CB22E09EF500D0CAE4 /* Resources */,
-				6707DFB6305A1E3807522515 /* [CP] Embed Pods Frameworks */,
+				38C83EFD85F4CCD3E1DF6D85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,7 +187,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6707DFB6305A1E3807522515 /* [CP] Embed Pods Frameworks */ = {
+		38C83EFD85F4CCD3E1DF6D85 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B677D322E09EF500D0CAE4 /* ViewController.swift in Sources */,
+				E9F2A28322E5E7D8005E062D /* WaterHK.swift in Sources */,
 				E9B677D122E09EF500D0CAE4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,13 +384,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iReminder/iReminder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 898BYM6W35;
+				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = iReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = UIkit.iReminder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.team.ireminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -385,13 +404,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iReminder/iReminder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 898BYM6W35;
+				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = iReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = UIkit.iReminder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.team.ireminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
