@@ -36,10 +36,10 @@
                                         <color key="value" red="0.38431372549999998" green="0.70980392160000005" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
-                                        <real key="value" value="14"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="innerRingWidth">
-                                        <real key="value" value="23"/>
+                                        <real key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="innerRingSpacing">
                                         <real key="value" value="9"/>
@@ -66,8 +66,6 @@
                                         <rect key="frame" x="56" y="0.0" width="39" height="30"/>
                                         <state key="normal" title="Reset"/>
                                         <connections>
-                                            <action selector="continueAnimation:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="zj0-2i-cMy"/>
-                                            <action selector="pauseAnimation:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="axm-iY-XEl"/>
                                             <action selector="resetProgress:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="R1s-dc-3wK"/>
                                         </connections>
                                     </button>
@@ -83,7 +81,6 @@
                                         <state key="normal" title="Continue"/>
                                         <connections>
                                             <action selector="continueAnimation:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="XCg-RA-MRN"/>
-                                            <action selector="pauseAnimation:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="7Zu-sT-86h"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -259,11 +256,45 @@
                     <navigationItem key="navigationItem" title="Settings" id="AfA-Hz-6q6"/>
                     <connections>
                         <outlet property="tableView" destination="qJr-jn-iqu" id="Dvn-uG-o9l"/>
+                        <segue destination="uJJ-4G-RUY" kind="show" identifier="RoutineSegue" id="zYA-bJ-eHi"/>
+                        <segue destination="ByP-1j-fdf" kind="show" identifier="EditProfileSegue" id="8sX-Xz-p7n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ao-I8-fRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4904" y="352"/>
+        </scene>
+        <!--Edit Profile-->
+        <scene sceneID="jxH-lQ-prk">
+            <objects>
+                <viewController id="ByP-1j-fdf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pvh-IS-Ham">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LS3-qu-hb5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="OAq-CG-TRe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SOM-84-VUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5883" y="866"/>
+        </scene>
+        <!--Routine-->
+        <scene sceneID="ADy-2H-ufd">
+            <objects>
+                <viewController id="uJJ-4G-RUY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="phC-7K-fCp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Hj4-FE-4vr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Routine" id="yTf-ku-ava"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPC-fZ-FEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6195" y="185"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h8R-B8-jaX">

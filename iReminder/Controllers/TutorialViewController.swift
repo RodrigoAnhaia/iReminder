@@ -60,7 +60,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.view.layoutIfNeeded()
+        self.view.layoutIfNeeded()
         
 
         //To call viewDidLayoutSubviews() and get dynamic width and height of scrollview

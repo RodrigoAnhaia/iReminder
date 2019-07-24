@@ -21,6 +21,8 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var editProfile: String = ""
+    var weekdays: String = ""
     var modelProfile: Profile = Profile(name: "Giovani Nícolas Bettoni", weight: "184", height: "90", age: "22")
     
     let cellsInSection = [["Profile Informations", "Drinking Pattern", "Health Information", "Notifications"], ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]]
@@ -63,18 +65,33 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
+        // Edit Profile
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell")
             //print(cellsInSection[0][indexPath.row])
-            cell?.textLabel?.text = cellsInSection[0][indexPath.row]
+            editProfile = cellsInSection[0][indexPath.row]
+            cell?.textLabel?.text = editProfile
             return cell!
+        // Routines
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell")
             //print(cellsInSection[1][indexPath.row])
-            cell?.textLabel?.text = cellsInSection[1][indexPath.row]
+            weekdays = cellsInSection[1][indexPath.row]
+            cell?.textLabel?.text = weekdays
             return cell!
         default:
             return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            performSegue(withIdentifier: "EditProfileSegue", sender: editProfile)
+        case 1:
+            performSegue(withIdentifier: "RoutineSegue", sender: weekdays)
+        default:
+            print("default")
         }
     }
     
