@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OEm-ir-Sqn">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -36,13 +36,13 @@
                                         <color key="value" red="0.38431372549999998" green="0.70980392160000005" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
-                                        <real key="value" value="14"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="innerRingWidth">
-                                        <real key="value" value="30"/>
+                                        <real key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="innerRingSpacing">
-                                        <real key="value" value="8"/>
+                                        <real key="value" value="9"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
                                         <real key="value" value="-90"/>
@@ -57,36 +57,28 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxq-4G-Hw5">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
-                                        <state key="normal" title="Start">
-                                            <color key="titleColor" red="0.23921568630000001" green="0.4431372549" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <state key="normal" title="Start"/>
                                         <connections>
                                             <action selector="startAnimation:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="k7I-jY-JKM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jim-P9-lBU">
                                         <rect key="frame" x="56" y="0.0" width="39" height="30"/>
-                                        <state key="normal" title="Reset">
-                                            <color key="titleColor" red="0.23921568630000001" green="0.4431372549" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <state key="normal" title="Reset"/>
                                         <connections>
                                             <action selector="resetProgress:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="R1s-dc-3wK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbH-lM-sgp">
                                         <rect key="frame" x="117" y="0.0" width="42" height="30"/>
-                                        <state key="normal" title="Pause">
-                                            <color key="titleColor" red="0.23921568630000001" green="0.4431372549" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <state key="normal" title="Pause"/>
                                         <connections>
                                             <action selector="pauseAnimation:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="JRA-Vj-hV6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5h-Tp-9uj">
                                         <rect key="frame" x="181" y="0.0" width="62" height="30"/>
-                                        <state key="normal" title="Continue">
-                                            <color key="titleColor" red="0.23921568630000001" green="0.4431372549" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <state key="normal" title="Continue"/>
                                         <connections>
                                             <action selector="continueAnimation:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="XCg-RA-MRN"/>
                                         </connections>
@@ -94,7 +86,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.78039215689999997" green="0.95294117649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Koa-2p-enD" firstAttribute="centerX" secondItem="yU3-a0-TL2" secondAttribute="centerX" id="NIj-bP-Ybb"/>
                             <constraint firstItem="yU3-a0-TL2" firstAttribute="centerX" secondItem="17r-kV-RG6" secondAttribute="centerX" id="YFD-9N-Rhi"/>
@@ -121,10 +113,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqE-pf-ma6" customClass="ButtonGradient" customModule="iReminder" customModuleProvider="target">
-                                <rect key="frame" x="32" y="734" width="350" height="44"/>
+                                <rect key="frame" x="32" y="733" width="350" height="45"/>
                                 <color key="backgroundColor" red="0.38431372549019605" green="0.70980392156862748" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="1Us-ZS-ywA"/>
+                                    <constraint firstAttribute="height" constant="45" id="1Us-ZS-ywA"/>
                                 </constraints>
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,11 +130,20 @@
                                     <action selector="pageChangedWith_sender:" destination="HSj-22-tjz" eventType="touchUpInside" id="D7H-vJ-M6U"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5be-74-yJK">
+                                <rect key="frame" x="32" y="798" width="350" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kL2-Td-he1"/>
+                                </constraints>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" red="0.23921568627450979" green="0.44313725490196076" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-Uo-alV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="630"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="629"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PkV-gD-y9w">
-                                <rect key="frame" x="187.66666666666666" y="674" width="39" height="40"/>
+                                <rect key="frame" x="0.0" y="673" width="414" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DLe-Vk-eUf"/>
                                 </constraints>
@@ -151,21 +152,26 @@
                         </subviews>
                         <color key="backgroundColor" red="0.7803921568627451" green="0.95294117647058818" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PkV-gD-y9w" firstAttribute="top" secondItem="tcu-Uo-alV" secondAttribute="bottom" id="5Gy-Jg-uFv"/>
-                            <constraint firstItem="FqE-pf-ma6" firstAttribute="top" secondItem="PkV-gD-y9w" secondAttribute="bottom" constant="20" id="EK1-1m-gUE"/>
-                            <constraint firstItem="pof-cq-uru" firstAttribute="bottom" secondItem="FqE-pf-ma6" secondAttribute="bottom" constant="84" id="LEg-hi-JdS"/>
-                            <constraint firstItem="tcu-Uo-alV" firstAttribute="leading" secondItem="pof-cq-uru" secondAttribute="leading" id="Qm4-r9-Z2i"/>
-                            <constraint firstItem="tcu-Uo-alV" firstAttribute="top" secondItem="pof-cq-uru" secondAttribute="top" id="a7p-VC-lQL"/>
-                            <constraint firstItem="tcu-Uo-alV" firstAttribute="trailing" secondItem="pof-cq-uru" secondAttribute="trailing" id="iqA-Dz-8Of"/>
-                            <constraint firstItem="FqE-pf-ma6" firstAttribute="leading" secondItem="pof-cq-uru" secondAttribute="leading" constant="32" id="lG0-H1-S3H"/>
-                            <constraint firstItem="FqE-pf-ma6" firstAttribute="centerX" secondItem="tcu-Uo-alV" secondAttribute="centerX" id="oxl-FM-Uq3"/>
-                            <constraint firstItem="FqE-pf-ma6" firstAttribute="centerX" secondItem="PkV-gD-y9w" secondAttribute="centerX" id="v4B-xH-ch7"/>
+                            <constraint firstItem="FqE-pf-ma6" firstAttribute="top" secondItem="PkV-gD-y9w" secondAttribute="bottom" constant="20" id="B3t-2L-WwZ"/>
+                            <constraint firstItem="pof-cq-uru" firstAttribute="bottom" secondItem="5be-74-yJK" secondAttribute="bottom" constant="20" id="CT5-bS-Tn4"/>
+                            <constraint firstItem="PkV-gD-y9w" firstAttribute="top" secondItem="tcu-Uo-alV" secondAttribute="bottom" id="EDc-GY-OJE"/>
+                            <constraint firstItem="FqE-pf-ma6" firstAttribute="leading" secondItem="pof-cq-uru" secondAttribute="leading" constant="32" id="K3u-e0-9VJ"/>
+                            <constraint firstItem="tcu-Uo-alV" firstAttribute="leading" secondItem="pof-cq-uru" secondAttribute="leading" id="LMA-t4-uGR"/>
+                            <constraint firstItem="pof-cq-uru" firstAttribute="trailing" secondItem="FqE-pf-ma6" secondAttribute="trailing" constant="32" id="LN0-tQ-sZ4"/>
+                            <constraint firstItem="PkV-gD-y9w" firstAttribute="leading" secondItem="pof-cq-uru" secondAttribute="leading" id="Xir-2q-ubR"/>
+                            <constraint firstItem="pof-cq-uru" firstAttribute="trailing" secondItem="5be-74-yJK" secondAttribute="trailing" constant="32" id="eya-iD-2n7"/>
+                            <constraint firstItem="PkV-gD-y9w" firstAttribute="trailing" secondItem="pof-cq-uru" secondAttribute="trailing" id="otp-Wc-ARB"/>
+                            <constraint firstItem="5be-74-yJK" firstAttribute="top" secondItem="FqE-pf-ma6" secondAttribute="bottom" constant="20" id="tSj-DM-Ted"/>
+                            <constraint firstItem="5be-74-yJK" firstAttribute="leading" secondItem="pof-cq-uru" secondAttribute="leading" constant="32" id="wIc-OV-CwM"/>
+                            <constraint firstItem="tcu-Uo-alV" firstAttribute="top" secondItem="pof-cq-uru" secondAttribute="top" id="xRn-Ub-fUj"/>
+                            <constraint firstItem="tcu-Uo-alV" firstAttribute="trailing" secondItem="pof-cq-uru" secondAttribute="trailing" id="yca-qu-T92"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pof-cq-uru"/>
                     </view>
                     <navigationItem key="navigationItem" id="rZz-8T-Rcq"/>
                     <connections>
                         <outlet property="btnGetStarted" destination="FqE-pf-ma6" id="FcE-wh-5U0"/>
+                        <outlet property="btnSignIn" destination="5be-74-yJK" id="1uS-UH-QJJ"/>
                         <outlet property="pageControl" destination="PkV-gD-y9w" id="g25-sL-Udw"/>
                         <outlet property="scrollView" destination="tcu-Uo-alV" id="ywD-fE-Zgr"/>
                     </connections>
@@ -196,13 +202,14 @@
         <scene sceneID="OUv-GX-c6k">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z3N-XQ-2Vr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="DJD-j7-QBU">
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="DJD-j7-QBU">
                         <color key="badgeColor" red="0.38431372549019605" green="0.70980392156862748" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SiK-8P-lwO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.47450980390000003" green="0.88235294119999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -223,16 +230,15 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qJr-jn-iqu">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" red="0.78039215689999997" green="0.95294117649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsCell" id="DNZ-kL-ffb">
-                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNZ-kL-ffb" id="tQE-zc-pF0">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.78039215689999997" green="0.95294117649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -250,11 +256,45 @@
                     <navigationItem key="navigationItem" title="Settings" id="AfA-Hz-6q6"/>
                     <connections>
                         <outlet property="tableView" destination="qJr-jn-iqu" id="Dvn-uG-o9l"/>
+                        <segue destination="uJJ-4G-RUY" kind="show" identifier="RoutineSegue" id="zYA-bJ-eHi"/>
+                        <segue destination="ByP-1j-fdf" kind="show" identifier="EditProfileSegue" id="8sX-Xz-p7n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ao-I8-fRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4904" y="352"/>
+        </scene>
+        <!--Edit Profile-->
+        <scene sceneID="jxH-lQ-prk">
+            <objects>
+                <viewController id="ByP-1j-fdf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pvh-IS-Ham">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LS3-qu-hb5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="OAq-CG-TRe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SOM-84-VUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5883" y="866"/>
+        </scene>
+        <!--Routine-->
+        <scene sceneID="ADy-2H-ufd">
+            <objects>
+                <viewController id="uJJ-4G-RUY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="phC-7K-fCp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Hj4-FE-4vr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Routine" id="yTf-ku-ava"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPC-fZ-FEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6195" y="185"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h8R-B8-jaX">
@@ -265,6 +305,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J3I-tk-PMN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.47450980392156861" green="0.88235294117647056" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
