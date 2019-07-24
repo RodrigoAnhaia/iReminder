@@ -26,7 +26,7 @@
 		9E34988622E1D69C001476A4 /* iReminder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iReminder.entitlements; sourceTree = "<group>"; };
 		9E34988A22E1D861001476A4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		9EA380AB22E734980021C9A2 /* ButtonGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGradient.swift; sourceTree = "<group>"; };
+		9EA380AB22E734980021C9A2 /* ButtonGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonGradient.swift; path = ../ButtonGradient.swift; sourceTree = "<group>"; };
 		BD63349DE4B577D6FFA5B2A0 /* Pods-iReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iReminder.release.xcconfig"; path = "Target Support Files/Pods-iReminder/Pods-iReminder.release.xcconfig"; sourceTree = "<group>"; };
 		E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E9B677CD22E09EF500D0CAE4 /* iReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +99,6 @@
 				E9B677D722E09EF700D0CAE4 /* Assets.xcassets */,
 				E9B677D922E09EF700D0CAE4 /* LaunchScreen.storyboard */,
 				E9B677DC22E09EF700D0CAE4 /* Info.plist */,
-				9EA380AB22E734980021C9A2 /* ButtonGradient.swift */,
 			);
 			path = iReminder;
 			sourceTree = "<group>";
@@ -118,6 +117,7 @@
 				E9B677D222E09EF500D0CAE4 /* ViewController.swift */,
 				9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */,
 				E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */,
+				9EA380AB22E734980021C9A2 /* ButtonGradient.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iReminder/iReminder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VHG5SDJ6H6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,7 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iReminder/iReminder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VHG5SDJ6H6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

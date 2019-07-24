@@ -34,7 +34,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var btnGetStarted: UIButton!
-    @IBOutlet weak var btnSignIn: UIButton!
+  
     
     var scrollWidth: CGFloat! = 0
     var scrollHeigt: CGFloat! = 0
@@ -45,8 +45,8 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     //Data for slides
     
     var titles = ["FAST DELIVERY", "EXCINTING OFFERS", "SECURE PAYMENT", "Choose your Clime"]
-    var descs = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",""]
-    var imgs = ["intro1", "intro2", "intro3", ""]
+    var descs = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.","Your type of climate may influence the amount of water to be ingested."]
+    var imgs = ["intro1", "intro2", "intro3", "lastT"]
 
     //Get dynamic width and height of scrollview and save it
     
@@ -60,10 +60,10 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.view.layoutIfNeeded()
+        self.view.layoutIfNeeded()
         
 
-        //To call viewDidLayoutSubviews() and get dynamic width and height of scrollview
+        //to call viewDidLayoutSubviews() and get dynamic width and height of scrollview
         self.scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
@@ -83,7 +83,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
             
             let imageViews = UIImageView.init(image: UIImage.init(named: imgs[index]))
             
-            imageViews.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+            imageViews.frame = CGRect(x: 0, y: 0, width: 120, height: 120)
             imageViews.contentMode = .scaleAspectFit
             imageViews.center = CGPoint(x: scrollWidth/2, y: scrollHeigt/2 - 100)
             
@@ -110,7 +110,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
         }
         //Create PickerView and TextField for option Clime
         let slide = UIView(frame: frame)
-        textField = UITextField(frame: CGRect(x: 32, y: 100, width: scrollWidth-64, height: 40))
+        textField = UITextField(frame: CGRect(x: 32, y: 200, width: scrollWidth-64, height: 40))
         picker = UIPickerView(frame: CGRect(x: 32, y: 80, width: scrollWidth-64, height: 200))
         
         textField.delegate = self
@@ -172,12 +172,18 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
         
         // Salvar clima no CoreData
         
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(textField.text, forKey: "Clime")
+        userDefaults.set(true, forKey: "Pie")
+        
+        print("Clime")
+        
         dismiss(animated: true, completion: nil)
-//        scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeigt), animated: true)
+        scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeigt), animated: true)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
+        print(#function)
         setIndiactorForCurrentPage()
     }
     
