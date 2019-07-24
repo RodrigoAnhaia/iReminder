@@ -110,7 +110,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
         }
         //Create PickerView and TextField for option Clime
         let slide = UIView(frame: frame)
-        textField = UITextField(frame: CGRect(x: 32, y: 200, width: scrollWidth-64, height: 40))
+        textField = UITextField(frame: CGRect(x: 32, y: 550, width: scrollWidth-64, height: 40))
         picker = UIPickerView(frame: CGRect(x: 32, y: 80, width: scrollWidth-64, height: 200))
         
         textField.delegate = self

@@ -118,7 +118,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="1Us-ZS-ywA"/>
                                 </constraints>
-                                <state key="normal" title="GET STARTED">
+                                <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -129,15 +129,6 @@
                                 <connections>
                                     <action selector="pageChangedWith_sender:" destination="HSj-22-tjz" eventType="touchUpInside" id="D7H-vJ-M6U"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5be-74-yJK">
-                                <rect key="frame" x="32" y="798" width="350" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="kL2-Td-he1"/>
-                                </constraints>
-                                <state key="normal" title="Skip">
-                                    <color key="titleColor" red="0.23921568627450979" green="0.44313725490196076" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-Uo-alV">
                                 <rect key="frame" x="0.0" y="44" width="414" height="629"/>
@@ -153,16 +144,13 @@
                         <color key="backgroundColor" red="0.7803921568627451" green="0.95294117647058818" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FqE-pf-ma6" firstAttribute="top" secondItem="PkV-gD-y9w" secondAttribute="bottom" constant="20" id="B3t-2L-WwZ"/>
-                            <constraint firstItem="pof-cq-uru" firstAttribute="bottom" secondItem="5be-74-yJK" secondAttribute="bottom" constant="20" id="CT5-bS-Tn4"/>
                             <constraint firstItem="PkV-gD-y9w" firstAttribute="top" secondItem="tcu-Uo-alV" secondAttribute="bottom" id="EDc-GY-OJE"/>
                             <constraint firstItem="FqE-pf-ma6" firstAttribute="leading" secondItem="pof-cq-uru" secondAttribute="leading" constant="32" id="K3u-e0-9VJ"/>
                             <constraint firstItem="tcu-Uo-alV" firstAttribute="leading" secondItem="pof-cq-uru" secondAttribute="leading" id="LMA-t4-uGR"/>
                             <constraint firstItem="pof-cq-uru" firstAttribute="trailing" secondItem="FqE-pf-ma6" secondAttribute="trailing" constant="32" id="LN0-tQ-sZ4"/>
                             <constraint firstItem="PkV-gD-y9w" firstAttribute="leading" secondItem="pof-cq-uru" secondAttribute="leading" id="Xir-2q-ubR"/>
-                            <constraint firstItem="pof-cq-uru" firstAttribute="trailing" secondItem="5be-74-yJK" secondAttribute="trailing" constant="32" id="eya-iD-2n7"/>
+                            <constraint firstItem="pof-cq-uru" firstAttribute="bottom" secondItem="FqE-pf-ma6" secondAttribute="bottom" constant="84" id="ZAo-sb-LLi"/>
                             <constraint firstItem="PkV-gD-y9w" firstAttribute="trailing" secondItem="pof-cq-uru" secondAttribute="trailing" id="otp-Wc-ARB"/>
-                            <constraint firstItem="5be-74-yJK" firstAttribute="top" secondItem="FqE-pf-ma6" secondAttribute="bottom" constant="20" id="tSj-DM-Ted"/>
-                            <constraint firstItem="5be-74-yJK" firstAttribute="leading" secondItem="pof-cq-uru" secondAttribute="leading" constant="32" id="wIc-OV-CwM"/>
                             <constraint firstItem="tcu-Uo-alV" firstAttribute="top" secondItem="pof-cq-uru" secondAttribute="top" id="xRn-Ub-fUj"/>
                             <constraint firstItem="tcu-Uo-alV" firstAttribute="trailing" secondItem="pof-cq-uru" secondAttribute="trailing" id="yca-qu-T92"/>
                         </constraints>
@@ -171,7 +159,6 @@
                     <navigationItem key="navigationItem" id="rZz-8T-Rcq"/>
                     <connections>
                         <outlet property="btnGetStarted" destination="FqE-pf-ma6" id="FcE-wh-5U0"/>
-                        <outlet property="btnSignIn" destination="5be-74-yJK" id="1uS-UH-QJJ"/>
                         <outlet property="pageControl" destination="PkV-gD-y9w" id="g25-sL-Udw"/>
                         <outlet property="scrollView" destination="tcu-Uo-alV" id="ywD-fE-Zgr"/>
                     </connections>
