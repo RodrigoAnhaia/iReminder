@@ -18,11 +18,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressRing.delegate = self
+        
+        // Change any of the properties
         progressRing.value = 0
+        
+        
         
     }
     
-    
+    @IBAction func animateInsertion(_ sender: UIButton) {
+        print("precisa adicionar o percentual da bebida tomada")
+    }
     
     @IBAction func startAnimation(_ sender: UICircularProgressRing) {
         progressRing.startProgress(to: 100, duration: 10.0) {
@@ -47,7 +54,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let requestPermission = water.requestHealthPermission()
+        _ = water.requestHealthPermission()
         
         if !UserDefaults.standard.bool(forKey: "didSee") {
             UserDefaults.standard.set(true, forKey: "didSee")
@@ -58,5 +65,29 @@ class ViewController: UIViewController {
         }
     
     }
+}
+
+extension ViewController: UICircularProgressRingDelegate {
+    func didFinishProgress(for ring: UICircularProgressRing) {
+        
+    }
+    
+    func didPauseProgress(for ring: UICircularProgressRing) {
+        
+    }
+    
+    func didContinueProgress(for ring: UICircularProgressRing) {
+        
+    }
+    
+    func didUpdateProgressValue(for ring: UICircularProgressRing, to newValue: CGFloat) {
+        
+    }
+    
+    func willDisplayLabel(for ring: UICircularProgressRing, _ label: UILabel) {
+        label.adjustsFontSizeToFitWidth = true
+    }
+    
+    
 }
 

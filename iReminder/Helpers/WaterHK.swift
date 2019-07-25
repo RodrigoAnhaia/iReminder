@@ -73,7 +73,7 @@ class WaterHK: HealthStoreContainer {
         let components = calendar.dateComponents([.year, .month, .day], from: now)
         
         guard let startDate = calendar.date(from: components) else {
-            fatalError("*** UNABLE TO CREATE THE START DATE***")
+            fatalError("*** UNABLE TO CREATE THE START DATE ***")
         }
         
         let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)

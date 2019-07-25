@@ -17,6 +17,7 @@
 		E934EE8E22E9ED5400D9A0C2 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8D22E9ED5400D9A0C2 /* Defaults.swift */; };
 		E934EE9022E9EE7900D9A0C2 /* ProfileHK.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8F22E9EE7900D9A0C2 /* ProfileHK.swift */; };
 		E934EE9222E9FC7D00D9A0C2 /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE9122E9FC7D00D9A0C2 /* RoutineViewController.swift */; };
+		E934EE9622EA339500D9A0C2 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE9522EA339500D9A0C2 /* CircularProgressBar.swift */; };
 		E9B677D122E09EF500D0CAE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B677D022E09EF500D0CAE4 /* AppDelegate.swift */; };
 		E9B677D322E09EF500D0CAE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B677D222E09EF500D0CAE4 /* ViewController.swift */; };
 		E9B677D622E09EF500D0CAE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B677D422E09EF500D0CAE4 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		E934EE8D22E9ED5400D9A0C2 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		E934EE8F22E9EE7900D9A0C2 /* ProfileHK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHK.swift; sourceTree = "<group>"; };
 		E934EE9122E9FC7D00D9A0C2 /* RoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
+		E934EE9522EA339500D9A0C2 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		E9B677CD22E09EF500D0CAE4 /* iReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B677D022E09EF500D0CAE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9B677D222E09EF500D0CAE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				E934EE8D22E9ED5400D9A0C2 /* Defaults.swift */,
 				E9F2A28222E5E7D8005E062D /* WaterHK.swift */,
 				E934EE8F22E9EE7900D9A0C2 /* ProfileHK.swift */,
+				E934EE9522EA339500D9A0C2 /* CircularProgressBar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				E9B677D122E09EF500D0CAE4 /* AppDelegate.swift in Sources */,
 				E934EE9022E9EE7900D9A0C2 /* ProfileHK.swift in Sources */,
 				E934EE8222E7852500D9A0C2 /* SettingsViewController.swift in Sources */,
+				E934EE9622EA339500D9A0C2 /* CircularProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iReminder/iReminder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = iReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,7 +448,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iReminder/iReminder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = iReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

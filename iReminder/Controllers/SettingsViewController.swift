@@ -17,7 +17,7 @@ class SettingsViewController: UIViewController {
     var weekdays: [String] = []
     var units: [String] = []
     
-    let cellsInSection = [["Profile and Health Informations", "Display", "Sound and Notifications"], ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], ["ml", "fl oz"]]
+    let cellsInSection = [["Profile and Health Informations", "Display", "Sound and Notifications"], ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], ["kg | ml", "lb | fl oz"]]
     let sections: [String] = ["General", "Routine", "Units"]
     
     override func viewDidLoad() {
