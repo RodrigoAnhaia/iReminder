@@ -7,34 +7,26 @@
 //
 
 import UIKit
-
-struct Profile {
-    let name: String
-    var weight: String
-    var height: String
-    var age: String
-}
-
-
+import HealthKit
 
 class SettingsViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
 
-    var editProfile: String = ""
-    var weekdays: String = ""
-    var modelProfile: Profile = Profile(name: "Giovani Nícolas Bettoni", weight: "184", height: "90", age: "22")
+    var editProfile: [String] = []
+    var weekdays: [String] = []
+    var units: [String] = []
     
-    let cellsInSection = [["Profile Informations", "Drinking Pattern", "Health Information", "Notifications"], ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]]
-    let sections: [String] = ["Edit Profile", "Routine"]
+    let cellsInSection = [["Profile and Health Informations", "Display", "Sound and Notifications"], ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], ["ml", "fl oz"]]
+    let sections: [String] = ["General", "Routine", "Units"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-
-        // Do any additional setup after loading the view.
+        
+        
     }
 
 }
@@ -58,15 +50,21 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell")
             //print(cellsInSection[0][indexPath.row])
-            editProfile = cellsInSection[0][indexPath.row]
-            cell?.textLabel?.text = editProfile
+            editProfile.append(cellsInSection[0][indexPath.row])
+            cell?.textLabel?.text = editProfile[indexPath.row]
             return cell!
         // Routines
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell")
             //print(cellsInSection[1][indexPath.row])
-            weekdays = cellsInSection[1][indexPath.row]
-            cell?.textLabel?.text = weekdays
+            weekdays.append(cellsInSection[1][indexPath.row])
+            cell?.textLabel?.text = weekdays[indexPath.row]
+            return cell!
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell")
+            //print(cellsInSection[1][indexPath.row])
+            units.append(cellsInSection[2][indexPath.row])
+            cell?.textLabel?.text = units[indexPath.row]
             return cell!
         default:
             return UITableViewCell()
@@ -75,10 +73,26 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
+        // Edit Profile
         case 0:
-            performSegue(withIdentifier: "EditProfileSegue", sender: editProfile)
+            switch indexPath.row {
+                // Profile
+                case 0:
+                    print(editProfile[indexPath.row])
+                // Themes
+                case 1:
+                    print(editProfile[indexPath.row])
+                default:
+                    print(editProfile[indexPath.row])
+            }
+        
+        // Routines
         case 1:
-            performSegue(withIdentifier: "RoutineSegue", sender: weekdays)
+            performSegue(withIdentifier: "RoutineSegue", sender: weekdays[indexPath.row])
+        // Units
+        case 2:
+            print("Exibir um alerta para recalcular unidades")
+        
         default:
             print("default")
         }

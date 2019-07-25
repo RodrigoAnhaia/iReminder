@@ -48,11 +48,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         let requestPermission = water.requestHealthPermission()
-        if requestPermission == false {
-            print("OPS TEMOS UM PROBLEMA SHEROKY")
-        } else {
-            print("Alright")
-        }
         
         if !UserDefaults.standard.bool(forKey: "didSee") {
             UserDefaults.standard.set(true, forKey: "didSee")
