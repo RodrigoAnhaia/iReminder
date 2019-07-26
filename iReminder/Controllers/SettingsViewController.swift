@@ -79,6 +79,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 // Profile
                 case 0:
                     print(editProfile[indexPath.row])
+                    performSegue(withIdentifier: "EditProfileSegue", sender: editProfile[indexPath.row])
                 // Themes
                 case 1:
                     print(editProfile[indexPath.row])
