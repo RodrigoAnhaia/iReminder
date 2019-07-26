@@ -6,6 +6,7 @@ target 'iReminder' do
   use_frameworks!
 
   # Pods for iReminder
-  pod 'UICircularProgressRing'
+  pod 'UICircularProgressRing', '~> 6.2'
+  pod 'JMMaskTextField-Swift'
 
 end

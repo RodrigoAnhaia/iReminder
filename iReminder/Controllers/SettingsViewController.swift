@@ -17,7 +17,7 @@ class SettingsViewController: UIViewController {
     var weekdays: [String] = []
     var units: [String] = []
     
-    let cellsInSection = [["Profile and Health Informations", "Display", "Sound and Notifications"], ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], ["ml", "fl oz"]]
+    let cellsInSection = [["Profile and Health Informations", "Display", "Sound and Notifications"], ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], ["kg | ml", "lb | fl oz"]]
     let sections: [String] = ["General", "Routine", "Units"]
     
     override func viewDidLoad() {
@@ -79,6 +79,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 // Profile
                 case 0:
                     print(editProfile[indexPath.row])
+                    performSegue(withIdentifier: "EditProfileSegue", sender: editProfile[indexPath.row])
                 // Themes
                 case 1:
                     print(editProfile[indexPath.row])
