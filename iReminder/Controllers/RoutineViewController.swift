@@ -84,7 +84,7 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func datePickerValueChanged(sender: UIDatePicker) {
-        var timeFormatter = DateFormatter()
+        let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "00:00"
         //UITextField.text = timeFormatter.string(from: sender.date)
     

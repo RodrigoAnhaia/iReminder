@@ -29,6 +29,10 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     var activityTextField: UITextField!
     var activityPicker: UIPickerView!
     
+    //UserDefaults init
+    let userDefaults = UserDefaults.standard
+    
+    
     //Data for slides
     
     var titles = ["FAST DELIVERY", "EXCINTING OFFERS", "SECURE PAYMENT", "Choose your activity level" ,"Choose your clime"]
@@ -124,7 +128,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
             
             let title = titles[index]
             if title.contains("Choose your clime")  {
-            
+             
                 //Create PickerView and TextField for option Clime
                 let slide = UIView(frame: frame)
                 climeTextField = UITextField(frame: CGRect(x: 32, y: 450, width: scrollWidth-64, height: 40))
@@ -209,19 +213,20 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
         climeTextField.resignFirstResponder()
         activityTextField.resignFirstResponder()
     }
+    
     //Indicator
     @IBAction func pageChanged(_sender: Any){
         
         // Salvar clima no CoreData
         
-        let userDefaults = UserDefaults.standard
+        
         userDefaults.set(climeTextField.text, forKey: "Clime")
+        userDefaults.set(activityTextField.text, forKey: "Activity")
         userDefaults.set(true, forKey: "Pie")
         
-        print("Clime")
-        
-        dismiss(animated: true, completion: nil)
         scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeigt), animated: true)
+        dismiss(animated: true, completion: nil)
+        
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -234,10 +239,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
         let page = (scrollView?.contentOffset.x)!/scrollWidth
         pageControl?.currentPage = Int(page)
         
-//        print("+++")
-//        print("\(pageControl.currentPage)")
-//        print("textField \(textField?.description ?? "No Textfield")")
-//        print("textField2 \(textField2?.description ?? "No Textfield")")
+
         if pageControl.currentPage == 3 || pageControl.currentPage == 4 {
             if let textField = climeTextField {
                 textField.isHidden = false
@@ -258,8 +260,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
             }
         }
     }
-    
-    
+   
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -267,33 +268,39 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        if titles.contains("Choose your clime") {
+
+        if pickerView == climePicker {
             return climateDataPicker.count
-        } else if titles.contains("Choose your activity level") {
+        } else if pickerView == activityPicker  {
             return activityDataPicker.count
         } else {
             return 0
         }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if titles.contains("Choose your clime") {
+       
+        if pickerView == climePicker {
             return climateDataPicker[row]
-        } else if titles.contains("Choose your activity level") {
+        } else if pickerView == activityPicker {
             return activityDataPicker[row]
         } else {
             return "ERROR"
         }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if titles.contains("Choose your clime") {
+        
+        if pickerView == climePicker {
             climeTextField.text = climateDataPicker[row]
-        } else if titles.contains("Choose your activity level") {
+        } else if pickerView == activityPicker  {
             activityTextField.text = activityDataPicker[row]
         }
         
     }
     
 }
+
+
