@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     @IBAction func addWaterPercentaje(_ sender: UIButton) {
         print("Insere água..")
-        print("abcd//")
+        
     }
     
     
@@ -60,12 +60,12 @@ class ViewController: UIViewController {
         
         if !UserDefaults.standard.bool(forKey: "didSee") {
             UserDefaults.standard.set(true, forKey: "didSee")
-            
+        
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "tutorial")
             present(viewController, animated: true, completion: nil)
         }
-        
+    
     }
 }
 
