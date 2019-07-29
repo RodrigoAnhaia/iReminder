@@ -11,6 +11,7 @@
 		9E6F14AA22E5DE3C0019BBD1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */; };
 		9EA380AC22E734980021C9A2 /* ButtonGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA380AB22E734980021C9A2 /* ButtonGradient.swift */; };
 		AD12CBA622EA819600CCC7D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD12CBA522EA819600CCC7D3 /* ViewController.swift */; };
+		AD12CBC922EF297700CCC7D3 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD12CBC822EF297700CCC7D3 /* Routine.swift */; };
 		B4C851762A102FB9057CA36F /* Pods_iReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837A0DC95EED9BF2BA3FD3CE /* Pods_iReminder.framework */; };
 		E934EE8222E7852500D9A0C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */; };
 		E934EE8922E9E43300D9A0C2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8822E9E43300D9A0C2 /* Profile.swift */; };
@@ -34,6 +35,7 @@
 		9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		9EA380AB22E734980021C9A2 /* ButtonGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonGradient.swift; path = ../ButtonGradient.swift; sourceTree = "<group>"; };
 		AD12CBA522EA819600CCC7D3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../.Trash/ViewController.swift; sourceTree = "<group>"; };
+		AD12CBC822EF297700CCC7D3 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		BD63349DE4B577D6FFA5B2A0 /* Pods-iReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iReminder.release.xcconfig"; path = "Target Support Files/Pods-iReminder/Pods-iReminder.release.xcconfig"; sourceTree = "<group>"; };
 		E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E934EE8822E9E43300D9A0C2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				E934EE8822E9E43300D9A0C2 /* Profile.swift */,
 				E934EE8B22E9EA3F00D9A0C2 /* HealthStoreContainer.swift */,
+				AD12CBC822EF297700CCC7D3 /* Routine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E934EE9222E9FC7D00D9A0C2 /* RoutineViewController.swift in Sources */,
+				AD12CBC922EF297700CCC7D3 /* Routine.swift in Sources */,
 				E934EE8E22E9ED5400D9A0C2 /* Defaults.swift in Sources */,
 				E9F2A28322E5E7D8005E062D /* WaterHK.swift in Sources */,
 				9EA380AC22E734980021C9A2 /* ButtonGradient.swift in Sources */,

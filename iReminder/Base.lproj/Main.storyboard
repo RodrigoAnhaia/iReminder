@@ -349,22 +349,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-nN-9GV">
-                                <rect key="frame" x="69" y="134" width="276" height="125.5"/>
+                                <rect key="frame" x="77" y="134" width="260.5" height="125.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6M7-UF-AF9">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="125.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="125.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="nhf-sd-Xfi">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="64"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm awake at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suD-Nr-uVn">
-                                                <rect key="frame" x="0.0" y="72" width="80" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="72" width="70" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="07:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vYD-Nd-ueS" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
-                                                <rect key="frame" x="0.0" y="94.5" width="80" height="31"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vYD-Nd-ueS" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
+                                                <rect key="frame" x="0.0" y="94.5" width="70" height="31"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -378,19 +378,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k10-Dg-5Bh">
-                                        <rect key="frame" x="195" y="0.0" width="81" height="125.5"/>
+                                        <rect key="frame" x="185" y="0.0" width="75.5" height="125.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="fXG-AV-NDH">
-                                                <rect key="frame" x="0.0" y="0.0" width="81" height="64"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75.5" height="64"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I go to bed at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gq-gq-tqc">
-                                                <rect key="frame" x="0.0" y="72" width="81" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="72" width="75.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="23:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxT-YR-2dB" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
-                                                <rect key="frame" x="0.0" y="94.5" width="81" height="31"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxT-YR-2dB" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
+                                                <rect key="frame" x="0.0" y="94.5" width="75.5" height="31"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -441,7 +441,11 @@
                         <viewLayoutGuide key="safeArea" id="Hj4-FE-4vr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Routine" id="yTf-ku-ava">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="4k6-qS-cgx"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="4k6-qS-cgx">
+                            <connections>
+                                <action selector="saveRoutineData:" destination="uJJ-4G-RUY" id="n1b-XO-CMo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textToAwake" destination="vYD-Nd-ueS" id="66S-Ub-LX7"/>

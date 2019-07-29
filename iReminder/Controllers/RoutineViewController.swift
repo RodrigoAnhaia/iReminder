@@ -8,9 +8,15 @@
 
 import UIKit
 
+
 class RoutineViewController: UIViewController, UITextFieldDelegate {
 
+    var modelRoutine: Routine = Routine(weekday: "Monday", timeToAwake: "10:00", timeToSleep: "23:00")
+    let defaults = UserDefaults.standard
+    
     var datePicker: UIDatePicker = UIDatePicker()
+    
+    // Outlets
     @IBOutlet weak var textToBed: UITextField!
     @IBOutlet weak var textToAwake: UITextField!
     
@@ -22,6 +28,21 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
         
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getData()
+    }
+    
+    func getData() {
+        print("awakeHour\(modelRoutine.weekday) - sleepHour\(modelRoutine.weekday)")
+        textToAwake.text = defaults.string(forKey: "awakeHour\(modelRoutine.weekday)")
+        textToBed.text = defaults.string(forKey: "sleepHour\(modelRoutine.weekday)")
+    }
+    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -73,5 +94,17 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
         print("Adicionando item na tableView")
     }
     
+    @IBAction func saveRoutineData(_ sender: Any) {
+        print("Saving data in \(modelRoutine.weekday)...")
+        
+        modelRoutine.timeToAwake = textToAwake.text!
+        defaults.set(modelRoutine.timeToAwake, forKey: "awakeHour\(modelRoutine.weekday)")
+        
+        modelRoutine.timeToSleep = textToBed.text!
+        defaults.set(modelRoutine.timeToSleep, forKey: "sleepHour\(modelRoutine.weekday)")
+        
+        print("## All data has been saved ##")
+        
+    }
     
 }
