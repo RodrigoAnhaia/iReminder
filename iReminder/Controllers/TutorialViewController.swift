@@ -124,7 +124,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
             
             let title = titles[index]
             if title.contains("Choose your clime")  {
-            
+             
                 //Create PickerView and TextField for option Clime
                 let slide = UIView(frame: frame)
                 climeTextField = UITextField(frame: CGRect(x: 32, y: 450, width: scrollWidth-64, height: 40))
@@ -209,6 +209,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
         climeTextField.resignFirstResponder()
         activityTextField.resignFirstResponder()
     }
+    
     //Indicator
     @IBAction func pageChanged(_sender: Any){
         
@@ -234,10 +235,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
         let page = (scrollView?.contentOffset.x)!/scrollWidth
         pageControl?.currentPage = Int(page)
         
-//        print("+++")
-//        print("\(pageControl.currentPage)")
-//        print("textField \(textField?.description ?? "No Textfield")")
-//        print("textField2 \(textField2?.description ?? "No Textfield")")
+
         if pageControl.currentPage == 3 || pageControl.currentPage == 4 {
             if let textField = climeTextField {
                 textField.isHidden = false
@@ -268,7 +266,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        if titles.contains("Choose your clime") {
+        if titles.contains("Choose your activity level") {
             return climateDataPicker.count
         } else if titles.contains("Choose your activity level") {
             return activityDataPicker.count
@@ -278,7 +276,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if titles.contains("Choose your clime") {
+        if titles.contains("Choose your activity level") {
             return climateDataPicker[row]
         } else if titles.contains("Choose your activity level") {
             return activityDataPicker[row]
@@ -288,7 +286,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if titles.contains("Choose your clime") {
+        if titles.contains("Choose your activity level") {
             climeTextField.text = climateDataPicker[row]
         } else if titles.contains("Choose your activity level") {
             activityTextField.text = activityDataPicker[row]

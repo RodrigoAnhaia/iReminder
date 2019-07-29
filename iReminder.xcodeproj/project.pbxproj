@@ -10,7 +10,7 @@
 		9E34988B22E1D861001476A4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E34988A22E1D861001476A4 /* HealthKit.framework */; };
 		9E6F14AA22E5DE3C0019BBD1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */; };
 		9EA380AC22E734980021C9A2 /* ButtonGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA380AB22E734980021C9A2 /* ButtonGradient.swift */; };
-		AD12CBA622EA819600CCC7D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD12CBA522EA819600CCC7D3 /* ViewController.swift */; };
+		9ED5A22922EB18B70013A5A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED5A22822EB18B60013A5A4 /* ViewController.swift */; };
 		B4C851762A102FB9057CA36F /* Pods_iReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837A0DC95EED9BF2BA3FD3CE /* Pods_iReminder.framework */; };
 		E934EE8222E7852500D9A0C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */; };
 		E934EE8922E9E43300D9A0C2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8822E9E43300D9A0C2 /* Profile.swift */; };
@@ -33,7 +33,7 @@
 		9E34988A22E1D861001476A4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		9EA380AB22E734980021C9A2 /* ButtonGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonGradient.swift; path = ../ButtonGradient.swift; sourceTree = "<group>"; };
-		AD12CBA522EA819600CCC7D3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../.Trash/ViewController.swift; sourceTree = "<group>"; };
+		9ED5A22822EB18B60013A5A4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD63349DE4B577D6FFA5B2A0 /* Pods-iReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iReminder.release.xcconfig"; path = "Target Support Files/Pods-iReminder/Pods-iReminder.release.xcconfig"; sourceTree = "<group>"; };
 		E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E934EE8822E9E43300D9A0C2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -139,8 +139,8 @@
 		E9F2A28122E5E75B005E062D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AD12CBA522EA819600CCC7D3 /* ViewController.swift */,
 				9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */,
+				9ED5A22822EB18B60013A5A4 /* ViewController.swift */,
 				E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */,
 				9EA380AB22E734980021C9A2 /* ButtonGradient.swift */,
 				E934EE9122E9FC7D00D9A0C2 /* RoutineViewController.swift */,
@@ -274,7 +274,7 @@
 				9EA380AC22E734980021C9A2 /* ButtonGradient.swift in Sources */,
 				E934EE8C22E9EA3F00D9A0C2 /* HealthStoreContainer.swift in Sources */,
 				E934EE8922E9E43300D9A0C2 /* Profile.swift in Sources */,
-				AD12CBA622EA819600CCC7D3 /* ViewController.swift in Sources */,
+				9ED5A22922EB18B70013A5A4 /* ViewController.swift in Sources */,
 				9E6F14AA22E5DE3C0019BBD1 /* TutorialViewController.swift in Sources */,
 				E9B677D122E09EF500D0CAE4 /* AppDelegate.swift in Sources */,
 				E934EE9022E9EE7900D9A0C2 /* ProfileHK.swift in Sources */,

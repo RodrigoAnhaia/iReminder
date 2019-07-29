@@ -8,5 +8,6 @@ target 'iReminder' do
   # Pods for iReminder
   pod 'UICircularProgressRing', '~> 6.2'
   pod 'JMMaskTextField-Swift'
+ 
 
 end
