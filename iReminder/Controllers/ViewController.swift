@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         progressRing.delegate = self
         
         // Change any of the properties
-        progressRing.value = 0
+        progressRing.value = 50
         
         
         
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addWaterPercentaje(_ sender: UIButton) {
+        progressRing.value = 10
         print("Insere água..")
         
     }

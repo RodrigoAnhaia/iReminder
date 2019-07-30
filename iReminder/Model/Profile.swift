@@ -14,5 +14,5 @@ struct Profile {
     var height: String
     var age: String
     var biologicalSex: String
+    
 }
-

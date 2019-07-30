@@ -8,19 +8,101 @@
 
 import UIKit
 
-class RoutineViewController: UIViewController, UITextFieldDelegate {
+class RoutineViewController: UIViewController, UITextFieldDelegate{
+ 
+    
 
     var datePicker: UIDatePicker = UIDatePicker()
     @IBOutlet weak var textToBed: UITextField!
     @IBOutlet weak var textToAwake: UITextField!
     
+    private var pickerTimeToAwake : UIDatePicker!
+    private var pickerTimeToBed : UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         textToAwake.delegate = self
+        textToAwake.placeholder = "Time to Awake"
         textToBed.delegate = self
+        textToBed.placeholder = "Time to Bed"
+        
+        createTimePicker()
+        
+    }
+    
+    func createTimePicker() {
+        
+        //Picker init
+        
+        pickerTimeToAwake = UIDatePicker()
+        pickerTimeToAwake!.datePickerMode = .time
+        pickerTimeToAwake?.addTarget(self, action: #selector(RoutineViewController.timeChanged(pickerTime:)), for: .valueChanged)
+        
+        pickerTimeToBed = UIDatePicker()
+        pickerTimeToBed!.datePickerMode = .time
+        pickerTimeToBed?.addTarget(self, action: #selector(RoutineViewController.timeChanged(pickerTime:)), for: .valueChanged)
+        
+        textToAwake.inputView = pickerTimeToAwake
+        textToBed.inputView = pickerTimeToBed
+        
+        //ToolBar for picker
+        let toolBar = UIToolbar()
+        
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 61/255, green: 113/255, blue: 128/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneButton(_:)))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelButton(_:)))
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .center
+        
+        toolBar.backgroundColor = #colorLiteral(red: 0.7803921569, green: 0.9529411765, blue: 1, alpha: 1)
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        textToAwake.inputAccessoryView = toolBar
+        textToBed.inputAccessoryView = toolBar
+    }
+    
+    @objc func timeChanged(pickerTime : UIDatePicker) {
+        toString()
+   
+    }
+    
+
+    
+    @objc func doneButton(_ sender: UIButton) {
+       
+        toString()
+    
+        // Tira o teclado
+        textToAwake.resignFirstResponder()
+        textToBed.resignFirstResponder()
+        
+    }
+    
+    @objc func cancelButton(_ sender: UIButton) {
+        textToAwake.resignFirstResponder()
+        textToBed.resignFirstResponder()
+    }
+    
+    func toString() {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.dateFormat = "HH:mm"
         
         
+        textToAwake.text = formatter.string(from: pickerTimeToAwake!.date)
+        textToBed.text = formatter.string(from: pickerTimeToBed!.date)
+    }
+    
+    @IBAction func addItemToRoutine(_ sender: UIButton) {
+        print("Adicionando item na tableView")
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -48,30 +130,6 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    @IBAction func timeToWake(_ sender: UITextField) {
-        datePicker.datePickerMode = .time
-        sender.inputView = datePicker
-        datePicker.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: .valueChanged)
-        
-    }
-    
-    @IBAction func timeToBed(_ sender: UITextField) {
-        datePicker.datePickerMode = .time
-        sender.inputView = datePicker
-        datePicker.addTarget(self, action: #selector(RoutineViewController.datePickerValueChanged), for: UIControl.Event.valueChanged)
-        
-    }
-    
-    @objc func datePickerValueChanged(sender: UIDatePicker) {
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "00:00"
-        //UITextField.text = timeFormatter.string(from: sender.date)
-    
-    }
-    
-    @IBAction func addItemToRoutine(_ sender: UIButton) {
-        print("Adicionando item na tableView")
-    }
     
     
 }

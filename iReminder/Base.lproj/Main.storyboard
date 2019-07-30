@@ -276,7 +276,7 @@
         <!--Edit Profile-->
         <scene sceneID="jxH-lQ-prk">
             <objects>
-                <viewController id="ByP-1j-fdf" sceneMemberID="viewController">
+                <viewController id="ByP-1j-fdf" customClass="ProfileViewController" customModule="iReminder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pvh-IS-Ham">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,25 +349,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-nN-9GV">
-                                <rect key="frame" x="69" y="134" width="276" height="125.5"/>
+                                <rect key="frame" x="76" y="134" width="262" height="125.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6M7-UF-AF9">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="125.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="125.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="nhf-sd-Xfi">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="64"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm awake at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suD-Nr-uVn">
-                                                <rect key="frame" x="0.0" y="72" width="80" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="72" width="72" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="07:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vYD-Nd-ueS" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
-                                                <rect key="frame" x="0.0" y="94.5" width="80" height="31"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vYD-Nd-ueS" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
+                                                <rect key="frame" x="0.0" y="94.5" width="72" height="31"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="00:00"/>
                                                 </userDefinedRuntimeAttributes>
@@ -378,19 +378,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k10-Dg-5Bh">
-                                        <rect key="frame" x="195" y="0.0" width="81" height="125.5"/>
+                                        <rect key="frame" x="187" y="0.0" width="75" height="125.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="fXG-AV-NDH">
-                                                <rect key="frame" x="0.0" y="0.0" width="81" height="64"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="64"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I go to bed at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gq-gq-tqc">
-                                                <rect key="frame" x="0.0" y="72" width="81" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="72" width="75" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="23:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxT-YR-2dB" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
-                                                <rect key="frame" x="0.0" y="94.5" width="81" height="31"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxT-YR-2dB" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
+                                                <rect key="frame" x="0.0" y="94.5" width="75" height="31"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -404,6 +404,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="k10-Dg-5Bh" firstAttribute="leading" secondItem="hC0-nN-9GV" secondAttribute="leading" constant="187" id="1Fu-60-G8h"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRx-zO-eiw">
                                 <rect key="frame" x="15" y="766" width="384" height="30"/>
@@ -428,6 +431,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hRx-zO-eiw" firstAttribute="leading" secondItem="Hj4-FE-4vr" secondAttribute="leading" constant="15" id="2lq-t1-Sna"/>
+                            <constraint firstItem="Hj4-FE-4vr" firstAttribute="trailing" secondItem="hC0-nN-9GV" secondAttribute="trailing" constant="76" id="6Ds-ea-DhW"/>
                             <constraint firstAttribute="bottom" secondItem="hRx-zO-eiw" secondAttribute="bottom" constant="100" id="Gqe-82-b32"/>
                             <constraint firstItem="RdA-Rz-714" firstAttribute="leading" secondItem="Hj4-FE-4vr" secondAttribute="leading" constant="15" id="OR0-h8-kcI"/>
                             <constraint firstItem="hC0-nN-9GV" firstAttribute="centerX" secondItem="phC-7K-fCp" secondAttribute="centerX" id="ZVF-vX-FO3"/>
@@ -435,6 +439,7 @@
                             <constraint firstItem="hC0-nN-9GV" firstAttribute="centerX" secondItem="Hj4-FE-4vr" secondAttribute="centerX" id="hnW-fe-KV3"/>
                             <constraint firstItem="Hj4-FE-4vr" firstAttribute="trailing" secondItem="RdA-Rz-714" secondAttribute="trailing" constant="15" id="kdF-1C-Xzz"/>
                             <constraint firstItem="Hj4-FE-4vr" firstAttribute="trailing" secondItem="hRx-zO-eiw" secondAttribute="trailing" constant="15" id="rm9-FH-uUp"/>
+                            <constraint firstItem="hC0-nN-9GV" firstAttribute="leading" secondItem="Hj4-FE-4vr" secondAttribute="leading" constant="76" id="sOg-Cq-OMZ"/>
                             <constraint firstItem="RdA-Rz-714" firstAttribute="top" secondItem="Hj4-FE-4vr" secondAttribute="top" constant="15" id="sUt-SJ-SIT"/>
                             <constraint firstItem="hC0-nN-9GV" firstAttribute="top" secondItem="RdA-Rz-714" secondAttribute="bottom" constant="10.5" id="viD-pp-Rhg"/>
                         </constraints>
