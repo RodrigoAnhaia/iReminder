@@ -17,8 +17,12 @@ class SettingsViewController: UIViewController {
     var weekdays: [String] = []
     var units: [String] = []
     
-    let cellsInSection = [["Profile and Health Informations", "Display", "Sound and Notifications"], ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], ["kg | ml", "lb | fl oz"]]
+    let cellsInSection = [["Profile and Health Informations", "Display", "Sound and Notifications"], ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], ["kg | ml", "lb | fl oz"]]
     let sections: [String] = ["General", "Routine", "Units"]
+    
+    var modelRoutine: Routine = Routine(weekday: "Monday", timeToAwake: "10:00", timeToSleep: "23:00")
+    let defaults = UserDefaults.standard
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +37,7 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellsInSection[section].count
+        return cellsInSection[section].count 
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -96,6 +100,16 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         
         default:
             print("default")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "RoutineSegue":
+            let segueRoutine = segue.destination as! RoutineViewController
+            segueRoutine.modelRoutine.weekday = sender as! String
+        default:
+            print("** NAO DEVE CAIR AQUI **")
         }
     }
     
