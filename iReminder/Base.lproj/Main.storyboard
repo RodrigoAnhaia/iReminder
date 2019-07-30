@@ -335,6 +335,10 @@
                         <viewLayoutGuide key="safeArea" id="LS3-qu-hb5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="OAq-CG-TRe"/>
+                    <connections>
+                        <outlet property="profileImgView" destination="dA5-nV-dXM" id="Jpk-dz-mj6"/>
+                        <outlet property="profileNameTxtFd" destination="gXm-wQ-PkI" id="rSC-Lx-AcO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOM-84-VUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -446,7 +450,11 @@
                         <viewLayoutGuide key="safeArea" id="Hj4-FE-4vr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Routine" id="yTf-ku-ava">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="4k6-qS-cgx"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="4k6-qS-cgx">
+                            <connections>
+                                <action selector="saveRoutineData:" destination="uJJ-4G-RUY" id="kHw-Jw-ZH5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textToAwake" destination="vYD-Nd-ueS" id="66S-Ub-LX7"/>

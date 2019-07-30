@@ -19,7 +19,7 @@ extension UIView {
         gradientLayer.locations = [0.0, 0.2,1.0]
         gradientLayer.startPoint = CGPoint(x: 1.0, y : 1.0)
         gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
-        
+        layer.cornerRadius = CGFloat(20)
         layer.insertSublayer(gradientLayer, at: 0)
     
     }

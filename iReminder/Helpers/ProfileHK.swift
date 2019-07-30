@@ -8,6 +8,6 @@
 
 import Foundation
 
-var modelProfile: Profile = Profile(name: "Giovani Nícolas Bettoni", weight: "184", height: "90", age: "22", biologicalSex: "male")
+var modelProfile: Profile = Profile(name: "Giovani Nícolas Bettoni", weight: "184", height: "90", age: "22", biologicalSex: "male", image: "")
 
 

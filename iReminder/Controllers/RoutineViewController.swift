@@ -27,9 +27,9 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
        
         textToAwake.delegate = self
-        textToAwake.placeholder = "Time to Awake"
+        //textToAwake.placeholder = "Time to Awake"
         textToBed.delegate = self
-        textToBed.placeholder = "Time to Bed"
+        //textToBed.placeholder = "Time to Bed"
         
         createTimePicker()
         
@@ -153,9 +153,11 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
         print("Saving data in \(modelRoutine.weekday)...")
         
         modelRoutine.timeToAwake = textToAwake.text!
+        print(textToAwake.text!)
         defaults.set(modelRoutine.timeToAwake, forKey: "awakeHour\(modelRoutine.weekday)")
         
         modelRoutine.timeToSleep = textToBed.text!
+        print(textToBed.text!)
         defaults.set(modelRoutine.timeToSleep, forKey: "sleepHour\(modelRoutine.weekday)")
         
         print("## All data has been saved ##")
