@@ -248,11 +248,17 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         getData()
+        if let index = self.routineTableView.indexPathForSelectedRow {
+            self.routineTableView.deselectRow(at: index, animated: true)
+        }
         addDrink.setTitle("Add drink in \(modelRoutine.weekday)", for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         getData()
+        if let index = self.routineTableView.indexPathForSelectedRow {
+            self.routineTableView.deselectRow(at: index, animated: true)
+        }
         addDrink.setTitle("Add drink in \(modelRoutine.weekday)", for: .normal)
     }
     

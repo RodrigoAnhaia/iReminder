@@ -154,4 +154,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         self.present(alert, animated: true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = self.tableView.indexPathForSelectedRow {
+            self.tableView.deselectRow(at: index, animated: true)
+        }
+    }
+    
 }
