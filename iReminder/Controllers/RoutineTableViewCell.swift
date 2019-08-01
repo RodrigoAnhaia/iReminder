@@ -10,6 +10,7 @@ import UIKit
 
 class RoutineTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var hourDrink: NSLayoutConstraint!
     @IBOutlet weak var typeDrink: UILabel!
     @IBOutlet weak var amountDrink: UILabel!
     @IBOutlet weak var drinkImage: UIImageView!

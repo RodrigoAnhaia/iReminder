@@ -14,6 +14,11 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var routineTableView: UITableView!
     var modelRoutine: Routine = Routine(weekday: "", timeToAwake: "", timeToSleep: "")
+    var modelDrinks: [Drinks] = [Drinks(typeDrink: "water", amountDrink: "200 ml"),
+                                 Drinks(typeDrink: "coffee", amountDrink: "240 ml"),
+                                 Drinks(typeDrink: "water", amountDrink: "240 ml"),
+                                 Drinks(typeDrink: "wine", amountDrink: "500 ml"),
+                                 Drinks(typeDrink: "water", amountDrink: "280 ml")]
     let defaults = UserDefaults.standard
     
     var datePicker: UIDatePicker = UIDatePicker()
@@ -304,15 +309,39 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
 extension RoutineViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return modelDrinks.count
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            modelDrinks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = routineTableView.dequeueReusableCell(withIdentifier: "RoutineTableCell") as? RoutineTableViewCell
+
+        let allDrinks = modelDrinks[indexPath.row]
+
+        cell?.amountDrink.text = "(\(allDrinks.amountDrink))"
+        cell?.typeDrink.text = allDrinks.typeDrink
+        switch cell?.typeDrink.text {
+        case "water":
+            cell?.drinkImage.image = UIImage(named: "water")
+        case "coffee":
+            cell?.drinkImage.image = UIImage(named: "coffee")
+        case "wine":
+            cell?.drinkImage.image = UIImage(named: "wine")
+        case "beer":
+            cell?.drinkImage.image = UIImage(named: "beer")
+        default:
+            print("default images")
+        }
+
+        return cell!
+        
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
     
 }
