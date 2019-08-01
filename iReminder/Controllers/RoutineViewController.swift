@@ -11,7 +11,7 @@ import UIKit
 
 class RoutineViewController: UIViewController, UITextFieldDelegate {
 
-    var modelRoutine: Routine = Routine(weekday: "Monday", timeToAwake: "10:00", timeToSleep: "23:00")
+    var modelRoutine: Routine = Routine(weekday: "", timeToAwake: "", timeToSleep: "")
     let defaults = UserDefaults.standard
     
     var datePicker: UIDatePicker = UIDatePicker()
