@@ -18,9 +18,9 @@ class SettingsViewController: UIViewController {
     var units: [String] = []
     
     let cellsInSection = [["Profile and Health Informations", "Display", "Sound and Notifications"], ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], ["kg | ml", "lb | fl oz"]]
-    let sections: [String] = ["General", "Routine", "Units"]
+    let sections: [String] = ["General", "Planning your Routine", "Units"]
     
-    var modelRoutine: Routine = Routine(weekday: "Monday", timeToAwake: "10:00", timeToSleep: "23:00")
+    var modelRoutine: Routine = Routine(weekday: "", timeToAwake: "", timeToSleep: "")
     let defaults = UserDefaults.standard
     
     
@@ -96,7 +96,18 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             performSegue(withIdentifier: "RoutineSegue", sender: weekdays[indexPath.row])
         // Units
         case 2:
+            switch indexPath.row {
+            // Right
+            case 0:
+                showRightAlert()
+            // Wrong
+            case 1:
+                showAssholeAlert()
+            default:
+                print(weekdays[indexPath.row])
+            }
             print("Exibir um alerta para recalcular unidades")
+            
         
         default:
             print("default")
@@ -109,9 +120,44 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             let segueRoutine = segue.destination as! RoutineViewController
             segueRoutine.modelRoutine.weekday = sender as! String
         default:
-            print("** NAO DEVE CAIR AQUI **")
+            print("** SEGUE DEFAULT **")
         }
     }
     
+    func showRightAlert() {
+        // Create the action buttons for the alert.
+        let defaultAction = UIAlertAction(title: "Ok",
+                                          style: .default) { (action) in
+                                            // Respond to user selection of the action.
+        }
+        
+        // Create and configure the alert controller.
+        let alert = UIAlertController(title: "This is the default",
+                                      message: "For instance, this is our only option available.",
+                                      preferredStyle: .alert)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true)
+    }
+    
+    func showAssholeAlert() {
+        // Create the action buttons for the alert.
+        let defaultAction = UIAlertAction(title: "Ok",
+                                          style: .default) { (action) in
+                                            // Respond to user selection of the action.
+        }
+        
+        // Create and configure the alert controller.
+        let alert = UIAlertController(title: "Calm down",
+                                      message: "Our team is currently working to fulfill your desire.",
+                                      preferredStyle: .alert)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = self.tableView.indexPathForSelectedRow {
+            self.tableView.deselectRow(at: index, animated: true)
+        }
+    }
     
 }

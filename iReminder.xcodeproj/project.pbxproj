@@ -14,6 +14,8 @@
 		9E6F14AA22E5DE3C0019BBD1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */; };
 		9EA380AC22E734980021C9A2 /* ButtonGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA380AB22E734980021C9A2 /* ButtonGradient.swift */; };
 		AD12CBC922EF297700CCC7D3 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD12CBC822EF297700CCC7D3 /* Routine.swift */; };
+		ADA4CED322F2806F0001A5C1 /* RoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CED222F2806F0001A5C1 /* RoutineTableViewCell.swift */; };
+		ADA4CED522F287DD0001A5C1 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CED422F287DD0001A5C1 /* Drink.swift */; };
 		B4C851762A102FB9057CA36F /* Pods_iReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837A0DC95EED9BF2BA3FD3CE /* Pods_iReminder.framework */; };
 		E934EE8222E7852500D9A0C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */; };
 		E934EE8922E9E43300D9A0C2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8822E9E43300D9A0C2 /* Profile.swift */; };
@@ -40,6 +42,8 @@
 		9E6F14A922E5DE3C0019BBD1 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		9EA380AB22E734980021C9A2 /* ButtonGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonGradient.swift; path = ../ButtonGradient.swift; sourceTree = "<group>"; };
 		AD12CBC822EF297700CCC7D3 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		ADA4CED222F2806F0001A5C1 /* RoutineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTableViewCell.swift; sourceTree = "<group>"; };
+		ADA4CED422F287DD0001A5C1 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		BD63349DE4B577D6FFA5B2A0 /* Pods-iReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iReminder.release.xcconfig"; path = "Target Support Files/Pods-iReminder/Pods-iReminder.release.xcconfig"; sourceTree = "<group>"; };
 		E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E934EE8822E9E43300D9A0C2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				E934EE8822E9E43300D9A0C2 /* Profile.swift */,
 				E934EE8B22E9EA3F00D9A0C2 /* HealthStoreContainer.swift */,
 				AD12CBC822EF297700CCC7D3 /* Routine.swift */,
+				ADA4CED422F287DD0001A5C1 /* Drink.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				9EA380AB22E734980021C9A2 /* ButtonGradient.swift */,
 				E934EE9122E9FC7D00D9A0C2 /* RoutineViewController.swift */,
 				9E39819B22F074D0005C1255 /* ProfileViewController.swift */,
+				ADA4CED222F2806F0001A5C1 /* RoutineTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +297,8 @@
 				E934EE9022E9EE7900D9A0C2 /* ProfileHK.swift in Sources */,
 				9E39819C22F074D0005C1255 /* ProfileViewController.swift in Sources */,
 				E934EE8222E7852500D9A0C2 /* SettingsViewController.swift in Sources */,
+				ADA4CED522F287DD0001A5C1 /* Drink.swift in Sources */,
+				ADA4CED322F2806F0001A5C1 /* RoutineTableViewCell.swift in Sources */,
 				E934EE9622EA339500D9A0C2 /* CircularProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

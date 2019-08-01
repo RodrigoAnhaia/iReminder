@@ -9,9 +9,17 @@
 import UIKit
 
 
+
 class RoutineViewController: UIViewController, UITextFieldDelegate {
 
+
+    @IBOutlet weak var routineTableView: UITableView!
     var modelRoutine: Routine = Routine(weekday: "", timeToAwake: "", timeToSleep: "")
+    var modelDrinks: [Drinks] = [Drinks(typeDrink: "water", amountDrink: "200 ml"),
+                                 Drinks(typeDrink: "coffee", amountDrink: "240 ml"),
+                                 Drinks(typeDrink: "water", amountDrink: "240 ml"),
+                                 Drinks(typeDrink: "wine", amountDrink: "500 ml"),
+                                 Drinks(typeDrink: "water", amountDrink: "280 ml")]
     let defaults = UserDefaults.standard
     
     var datePicker: UIDatePicker = UIDatePicker()
@@ -19,6 +27,7 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
     // Outlets
     @IBOutlet weak var textToBed: UITextField!
     @IBOutlet weak var textToAwake: UITextField!
+    @IBOutlet weak var addDrink: UIButton!
     
     private var pickerTimeToAwake : UIDatePicker!
     private var pickerTimeToBed : UIDatePicker!
@@ -26,12 +35,15 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        routineTableView.dataSource = self
+        routineTableView.delegate = self
         textToAwake.delegate = self
         //textToAwake.placeholder = "Time to Awake"
         textToBed.delegate = self
         //textToBed.placeholder = "Time to Bed"
         
         createTimePicker()
+        
         
     }
     
@@ -78,10 +90,7 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
    
     }
     
-
-    
     @objc func doneButton(_ sender: UIButton) {
-       
         toString()
     
         // Tira o teclado
@@ -107,14 +116,151 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addItemToRoutine(_ sender: UIButton) {
         print("Adicionando item na tableView")
+        showCustomAlert()
+    }
+    
+    func showCustomAlert() {
+        var custom_type: UITextField?
+        custom_type?.layer.cornerRadius = 5
+        var custom_amount: UITextField?
+        custom_amount?.layer.cornerRadius = 5
+        var custom_hour: UITextField?
+        custom_hour?.layer.cornerRadius = 5
+        
+        let alertController = UIAlertController(title: "Add likely drink on weekday", message: "Please add the drinks you normally drink this day of the week", preferredStyle: .alert)
+        
+        let drinkAction = UIAlertAction(title: "Adding custom drink in \(modelRoutine.weekday)", style: .default) { (action) in
+            if let type = custom_type?.text {
+                print(type)
+                let userType: String = type
+                print(userType)
+                // Save data do CoreData
+            }else {
+                alertController.dismiss(animated: true, completion: nil)
+            }
+            if let amt = custom_amount?.text {
+                print(amt)
+                let userAmount: Double = Double(amt)!
+                print(userAmount)
+                // Save data do CoreData
+                //self.waterlog.addAmount(amount: userAmount)
+                //_ = self.updateTotalAmount()
+            }else {
+                alertController.dismiss(animated: true, completion: nil)
+            }
+            if let hour = custom_hour?.text {
+                print(hour)
+                let userHour: String = hour
+                print(userHour)
+                // Save data do CoreData
+                //self.waterlog.addAmount(amount: userAmount)
+                //_ = self.updateTotalAmount()
+            } else {
+                alertController.dismiss(animated: true, completion: nil)
+            }
+        }
+        
+        let cupWaterAction = UIAlertAction(title: "Adding 1 cup of water in \(modelRoutine.weekday)", style: .default) { (action) in
+            if let type = custom_type?.text {
+                print(type)
+                let userType: String = "water"
+                print(userType)
+                // Save data do CoreData
+            }else {
+                alertController.dismiss(animated: true, completion: nil)
+            }
+            if let amt = custom_amount?.text {
+                print(amt)
+                let userAmount: Double = 200.0
+                print(userAmount)
+                // Save data do CoreData
+                //self.waterlog.addAmount(amount: userAmount)
+                //_ = self.updateTotalAmount()
+            }else {
+                alertController.dismiss(animated: true, completion: nil)
+            }
+            if let hour = custom_hour?.text {
+                print(hour)
+                let userHour: String = hour
+                print(userHour)
+                // Save data do CoreData
+                //self.waterlog.addAmount(amount: userAmount)
+                //_ = self.updateTotalAmount()
+            } else {
+                alertController.dismiss(animated: true, completion: nil)
+            }
+        }
+        
+        
+        alertController.addTextField { (type) in
+            custom_type = type
+            custom_type!.placeholder = "type, e.g, water, coffee, tea, wine"
+            custom_type!.keyboardType = .default
+        }
+        
+        alertController.addTextField { (amt) in
+            custom_amount = amt
+            custom_amount!.placeholder = "amount, e.g., 200ml or 16 fl oz"
+            custom_amount!.keyboardType = .numberPad
+        }
+        alertController.addTextField { (hour) in
+            custom_hour = hour
+            custom_hour!.placeholder = "hour"
+            custom_hour!.keyboardType = .numberPad
+        }
+        
+        
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction(drinkAction)
+        alertController.addAction(cupWaterAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    func showAlertSimple() {
+        // Create the action buttons for the alert.
+        let defaultAction = UIAlertAction(title: "Agree",
+                                          style: .default) { (action) in
+                                            // Respond to user selection of the action.
+        }
+        let cancelAction = UIAlertAction(title: "Disagree",
+                                         style: .cancel) { (action) in
+                                            // Respond to user selection of the action.
+        }
+        
+        // Create and configure the alert controller.
+        let alert = UIAlertController(title: "Terms and Conditions",
+                                      message: "Click Agree to accept the terms and conditions.",
+                                      preferredStyle: .alert)
+        alert.addAction(defaultAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true) {
+            // The alert was presented
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         getData()
+        if let index = self.routineTableView.indexPathForSelectedRow {
+            self.routineTableView.deselectRow(at: index, animated: true)
+        }
+        addDrink.setTitle("Add drink in \(modelRoutine.weekday)", for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         getData()
+        if let index = self.routineTableView.indexPathForSelectedRow {
+            self.routineTableView.deselectRow(at: index, animated: true)
+        }
+        addDrink.setTitle("Add drink in \(modelRoutine.weekday)", for: .normal)
     }
     
     func getData() {
@@ -161,6 +307,46 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
         defaults.set(modelRoutine.timeToSleep, forKey: "sleepHour\(modelRoutine.weekday)")
         
         print("## All data has been saved ##")
+        
+    }
+    
+    
+}
+
+extension RoutineViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return modelDrinks.count
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            modelDrinks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = routineTableView.dequeueReusableCell(withIdentifier: "RoutineTableCell") as? RoutineTableViewCell
+
+        let allDrinks = modelDrinks[indexPath.row]
+
+        cell?.amountDrink.text = "(\(allDrinks.amountDrink))"
+        cell?.typeDrink.text = allDrinks.typeDrink
+        switch cell?.typeDrink.text {
+        case "water":
+            cell?.drinkImage.image = UIImage(named: "water")
+        case "coffee":
+            cell?.drinkImage.image = UIImage(named: "coffee")
+        case "wine":
+            cell?.drinkImage.image = UIImage(named: "wine")
+        case "beer":
+            cell?.drinkImage.image = UIImage(named: "beer")
+        default:
+            print("default images")
+        }
+
+        return cell!
         
     }
     
