@@ -57,31 +57,24 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Koa-2p-enD">
-                                <rect key="frame" x="85.5" y="458" width="243" height="30"/>
+                                <rect key="frame" x="113.5" y="458" width="187" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxq-4G-Hw5">
-                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
-                                        <state key="normal" title="Start"/>
-                                        <connections>
-                                            <action selector="startAnimation:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="k7I-jY-JKM"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jim-P9-lBU">
-                                        <rect key="frame" x="56" y="0.0" width="39" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
                                         <state key="normal" title="Reset"/>
                                         <connections>
                                             <action selector="resetProgress:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="R1s-dc-3wK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbH-lM-sgp">
-                                        <rect key="frame" x="117" y="0.0" width="42" height="30"/>
+                                        <rect key="frame" x="61" y="0.0" width="42" height="30"/>
                                         <state key="normal" title="Pause"/>
                                         <connections>
                                             <action selector="pauseAnimation:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="JRA-Vj-hV6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5h-Tp-9uj">
-                                        <rect key="frame" x="181" y="0.0" width="62" height="30"/>
+                                        <rect key="frame" x="125" y="0.0" width="62" height="30"/>
                                         <state key="normal" title="Continue"/>
                                         <connections>
                                             <action selector="continueAnimation:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="XCg-RA-MRN"/>
@@ -90,7 +83,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b3i-7q-5Ld">
-                                <rect key="frame" x="35" y="558" width="344" height="70"/>
+                                <rect key="frame" x="35" y="558" width="344" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uj-Ic-vIU">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="30"/>
@@ -107,8 +100,23 @@
                                             <action selector="addWaterPercentaje:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="qC3-ls-lXF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtU-Cr-THc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utv-kT-Lag">
                                         <rect key="frame" x="0.0" y="40" width="344" height="30"/>
+                                        <color key="backgroundColor" red="0.99347607583076269" green="1" blue="0.83576109449985625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Add bathroom trips for today">
+                                            <color key="titleColor" red="0.70050761421319796" green="0.57389483638347372" blue="0.18963653306312664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addTripToBathroom:" destination="zhd-Gq-UC4" eventType="touchUpInside" id="9kU-Ed-eYJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtU-Cr-THc">
+                                        <rect key="frame" x="0.0" y="80" width="344" height="30"/>
                                         <color key="backgroundColor" red="0.7148098349571228" green="0.93400442600250244" blue="0.84677046537399292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="   List of the day   ">
                                             <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -121,6 +129,44 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwT-AD-gZq" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="87" y="158" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ShT-PN-8xO"/>
+                                    <constraint firstAttribute="height" constant="240" id="p3h-zd-cmZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                                        <color key="value" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="innerRingWidth">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="innerRingSpacing">
+                                        <real key="value" value="-9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClockwise" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="llS-Ld-qWi">
                                 <rect key="frame" x="143" y="214" width="128" height="128"/>
                                 <constraints>
@@ -149,11 +195,13 @@
                             <constraint firstItem="V3b-FW-cwC" firstAttribute="top" secondItem="llS-Ld-qWi" secondAttribute="bottom" constant="-119" id="KXZ-nb-hLR"/>
                             <constraint firstItem="b3i-7q-5Ld" firstAttribute="centerX" secondItem="Koa-2p-enD" secondAttribute="centerX" id="Miz-iS-5aw"/>
                             <constraint firstItem="Koa-2p-enD" firstAttribute="centerX" secondItem="yU3-a0-TL2" secondAttribute="centerX" id="NIj-bP-Ybb"/>
+                            <constraint firstItem="bwT-AD-gZq" firstAttribute="centerY" secondItem="yU3-a0-TL2" secondAttribute="centerY" id="TNb-Af-IW9"/>
                             <constraint firstItem="llS-Ld-qWi" firstAttribute="top" secondItem="yU3-a0-TL2" secondAttribute="bottom" constant="-214" id="ViQ-6A-WYO"/>
                             <constraint firstItem="yU3-a0-TL2" firstAttribute="centerX" secondItem="17r-kV-RG6" secondAttribute="centerX" id="YFD-9N-Rhi"/>
                             <constraint firstItem="Koa-2p-enD" firstAttribute="top" secondItem="yU3-a0-TL2" secondAttribute="bottom" constant="30" id="Zyk-ZU-mlR"/>
                             <constraint firstItem="llS-Ld-qWi" firstAttribute="centerX" secondItem="yU3-a0-TL2" secondAttribute="centerX" id="cDP-95-UkF"/>
                             <constraint firstItem="V3b-FW-cwC" firstAttribute="centerX" secondItem="llS-Ld-qWi" secondAttribute="centerX" id="cGC-aZ-6Sv"/>
+                            <constraint firstItem="bwT-AD-gZq" firstAttribute="centerX" secondItem="yU3-a0-TL2" secondAttribute="centerX" id="hyi-8v-6wN"/>
                             <constraint firstItem="yU3-a0-TL2" firstAttribute="top" secondItem="gU7-uz-OJO" secondAttribute="top" constant="40" id="jUC-Ik-f0x"/>
                             <constraint firstItem="gU7-uz-OJO" firstAttribute="trailing" secondItem="b3i-7q-5Ld" secondAttribute="trailing" constant="35" id="s1z-Hi-D6y"/>
                             <constraint firstItem="b3i-7q-5Ld" firstAttribute="leading" secondItem="gU7-uz-OJO" secondAttribute="leading" constant="35" id="yhP-dj-Bfc"/>
@@ -173,7 +221,8 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="progressRing" destination="yU3-a0-TL2" id="QPF-OV-170"/>
+                        <outlet property="drinksProgressRing" destination="yU3-a0-TL2" id="Nke-md-ILm"/>
+                        <outlet property="peeProgressRing" destination="bwT-AD-gZq" id="PDP-NR-Zcj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqV-g4-4A1" userLabel="First Responder" sceneMemberID="firstResponder"/>

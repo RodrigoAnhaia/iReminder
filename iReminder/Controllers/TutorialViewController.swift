@@ -35,7 +35,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     
     //Data for slides
     
-    var titles = ["FAST DELIVERY", "EXCINTING OFFERS", "SECURE PAYMENT", "Choose your activity level" ,"Choose your clime"]
+    var titles = ["FAST DELIVERY", "EXCINTING OFFERS", "Connect with your Health Apps", "Choose your activity level" ,"Choose your clime"]
     var descs = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "This is influence the amount of water to be ingested.","Your type of climate may influence the amount of water to be ingested."]
     var imgs = ["intro1", "intro2", "intro3", "actT","lastT"]
 

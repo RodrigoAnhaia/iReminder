@@ -129,17 +129,23 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
         let alertController = UIAlertController(title: "Add likely drink on weekday", message: "Please add the drinks you normally drink this day of the week", preferredStyle: .alert)
         
         let drinkAction = UIAlertAction(title: "Adding custom drink in \(modelRoutine.weekday)", style: .default) { (action) in
+            
+            var userType: String = ""
+            var userAmount: String = ""
+            var userHour: String = ""
+            
             if let type = custom_type?.text {
                 print(type)
-                let userType: String = type
+                userType = type
                 print(userType)
                 // Save data do CoreData
+                
             }else {
                 alertController.dismiss(animated: true, completion: nil)
             }
             if let amt = custom_amount?.text {
                 print(amt)
-                let userAmount: Double = Double(amt)!
+                userAmount = amt
                 print(userAmount)
                 // Save data do CoreData
                 //self.waterlog.addAmount(amount: userAmount)
@@ -149,7 +155,7 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
             }
             if let hour = custom_hour?.text {
                 print(hour)
-                let userHour: String = hour
+                userHour = hour
                 print(userHour)
                 // Save data do CoreData
                 //self.waterlog.addAmount(amount: userAmount)
@@ -157,12 +163,19 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
             } else {
                 alertController.dismiss(animated: true, completion: nil)
             }
+            
+//            self.modelDrinks.append(Drinks(typeDrink: userType, amountDrink: userAmount))
         }
         
         let cupWaterAction = UIAlertAction(title: "Adding 1 cup of water in \(modelRoutine.weekday)", style: .default) { (action) in
+            
+            var userType: String = ""
+            var userAmount: String = ""
+            var userHour: String = ""
+            
             if let type = custom_type?.text {
                 print(type)
-                let userType: String = "water"
+                userType = "water"
                 print(userType)
                 // Save data do CoreData
             }else {
@@ -170,7 +183,7 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
             }
             if let amt = custom_amount?.text {
                 print(amt)
-                let userAmount: Double = 200.0
+                userAmount = "200.0"
                 print(userAmount)
                 // Save data do CoreData
                 //self.waterlog.addAmount(amount: userAmount)
@@ -180,7 +193,7 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
             }
             if let hour = custom_hour?.text {
                 print(hour)
-                let userHour: String = hour
+                userHour = hour
                 print(userHour)
                 // Save data do CoreData
                 //self.waterlog.addAmount(amount: userAmount)
@@ -188,6 +201,7 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
             } else {
                 alertController.dismiss(animated: true, completion: nil)
             }
+//            self.modelDrinks.append(Drinks(typeDrink: userType, amountDrink: userAmount))
         }
         
         
@@ -346,6 +360,12 @@ extension RoutineViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         return cell!
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = routineTableView.dequeueReusableCell(withIdentifier: "RoutineTableCell") as? RoutineTableViewCell
+        
         
     }
     

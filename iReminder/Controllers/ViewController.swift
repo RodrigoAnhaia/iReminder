@@ -12,15 +12,17 @@ class ViewController: UIViewController {
     
     var water = WaterHK()
     
-    @IBOutlet weak var progressRing: UICircularProgressRing!
+    @IBOutlet weak var drinksProgressRing: UICircularProgressRing!
     
+    @IBOutlet weak var peeProgressRing: UICircularProgressRing!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        progressRing.delegate = self
-        
+        drinksProgressRing.delegate = self
+        peeProgressRing.delegate = self
         // Change any of the properties
-        progressRing.value = 50
+        drinksProgressRing.value = 0
+        peeProgressRing.value = 0
         
         
         
@@ -28,31 +30,32 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addWaterPercentaje(_ sender: UIButton) {
-        progressRing.value = 10
-        print("Insere água..")
-        
+        print("Insere 10% de água..")
+        drinksProgressRing.startProgress(to: drinksProgressRing.currentValue! + 10, duration: 1.0)
     }
     
     
-    @IBAction func startAnimation(_ sender: UICircularProgressRing) {
-        progressRing.startProgress(to: 100, duration: 10.0) {
-            print("Done animating!")
-            // Do anything your heart desires...
-        }
+    @IBAction func addTripToBathroom(_ sender: UIButton) {
+        print("Insere uma ida ao banheiro..")
+        peeProgressRing.startProgress(to: peeProgressRing.currentValue! + 15, duration: 1.0)
     }
+    
     
     @IBAction func pauseAnimation(_ sender: UICircularProgressRing) {
-        progressRing.pauseProgress()
+        drinksProgressRing.pauseProgress()
+        peeProgressRing.pauseProgress()
         //print("paused in \(progressRing.currentValue)")
     }
     
     @IBAction func continueAnimation(_ sender: UICircularProgressRing) {
-        progressRing.continueProgress()
+        drinksProgressRing.continueProgress()
+        peeProgressRing.continueProgress()
         print("continued..")
     }
     
     @IBAction func resetProgress(_ sender: UICircularProgressRing) {
-        progressRing.resetProgress()
+        drinksProgressRing.resetProgress()
+        peeProgressRing.resetProgress()
         print("reset")
     }
     
@@ -73,10 +76,18 @@ class ViewController: UIViewController {
 extension ViewController: UICircularProgressRingDelegate {
     func didFinishProgress(for ring: UICircularProgressRing) {
         
+        
+        print("Current Value \(ring.currentValue!)")
+        print("complete all rings for the day")
     }
     
     func didPauseProgress(for ring: UICircularProgressRing) {
-        
+        if drinksProgressRing.currentValue == 10 {
+            drinksProgressRing.pauseProgress()
+        }
+        if peeProgressRing.currentValue == 10 {
+            peeProgressRing.pauseProgress()
+        }
     }
     
     func didContinueProgress(for ring: UICircularProgressRing) {
@@ -88,7 +99,7 @@ extension ViewController: UICircularProgressRingDelegate {
     }
     
     func willDisplayLabel(for ring: UICircularProgressRing, _ label: UILabel) {
-        label.adjustsFontSizeToFitWidth = true
+        
     }
     
     
