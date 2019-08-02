@@ -16,6 +16,8 @@
 		AD12CBC922EF297700CCC7D3 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD12CBC822EF297700CCC7D3 /* Routine.swift */; };
 		ADA4CED322F2806F0001A5C1 /* RoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CED222F2806F0001A5C1 /* RoutineTableViewCell.swift */; };
 		ADA4CED522F287DD0001A5C1 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CED422F287DD0001A5C1 /* Drink.swift */; };
+		ADA4CED722F3F43E0001A5C1 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CED622F3F43E0001A5C1 /* TodayTableViewCell.swift */; };
+		ADA4CED922F3F5220001A5C1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CED822F3F5220001A5C1 /* TodayViewController.swift */; };
 		B4C851762A102FB9057CA36F /* Pods_iReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837A0DC95EED9BF2BA3FD3CE /* Pods_iReminder.framework */; };
 		E934EE8222E7852500D9A0C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */; };
 		E934EE8922E9E43300D9A0C2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934EE8822E9E43300D9A0C2 /* Profile.swift */; };
@@ -44,6 +46,8 @@
 		AD12CBC822EF297700CCC7D3 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		ADA4CED222F2806F0001A5C1 /* RoutineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTableViewCell.swift; sourceTree = "<group>"; };
 		ADA4CED422F287DD0001A5C1 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		ADA4CED622F3F43E0001A5C1 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
+		ADA4CED822F3F5220001A5C1 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		BD63349DE4B577D6FFA5B2A0 /* Pods-iReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iReminder.release.xcconfig"; path = "Target Support Files/Pods-iReminder/Pods-iReminder.release.xcconfig"; sourceTree = "<group>"; };
 		E934EE8122E7852500D9A0C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E934EE8822E9E43300D9A0C2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				E934EE9122E9FC7D00D9A0C2 /* RoutineViewController.swift */,
 				9E39819B22F074D0005C1255 /* ProfileViewController.swift */,
 				ADA4CED222F2806F0001A5C1 /* RoutineTableViewCell.swift */,
+				ADA4CED622F3F43E0001A5C1 /* TodayTableViewCell.swift */,
+				ADA4CED822F3F5220001A5C1 /* TodayViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 				9E3981A422F07D6C005C1255 /* ViewController.swift in Sources */,
 				E934EE9222E9FC7D00D9A0C2 /* RoutineViewController.swift in Sources */,
 				AD12CBC922EF297700CCC7D3 /* Routine.swift in Sources */,
+				ADA4CED922F3F5220001A5C1 /* TodayViewController.swift in Sources */,
 				E934EE8E22E9ED5400D9A0C2 /* Defaults.swift in Sources */,
 				9E3981A222F07CDA005C1255 /* iReminder.xcdatamodeld in Sources */,
 				E9F2A28322E5E7D8005E062D /* WaterHK.swift in Sources */,
@@ -296,6 +303,7 @@
 				E9B677D122E09EF500D0CAE4 /* AppDelegate.swift in Sources */,
 				E934EE9022E9EE7900D9A0C2 /* ProfileHK.swift in Sources */,
 				9E39819C22F074D0005C1255 /* ProfileViewController.swift in Sources */,
+				ADA4CED722F3F43E0001A5C1 /* TodayTableViewCell.swift in Sources */,
 				E934EE8222E7852500D9A0C2 /* SettingsViewController.swift in Sources */,
 				ADA4CED522F287DD0001A5C1 /* Drink.swift in Sources */,
 				ADA4CED322F2806F0001A5C1 /* RoutineTableViewCell.swift in Sources */,
@@ -448,13 +456,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iReminder/iReminder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 898BYM6W35;
+				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = iReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.team.ireminder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.team.academy.ireminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,13 +476,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iReminder/iReminder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 898BYM6W35;
+				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = iReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.team.ireminder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.team.academy.ireminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

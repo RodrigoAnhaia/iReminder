@@ -28,10 +28,10 @@
 	<string>TESTE</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>Able to present past and current information in the App</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>Able to log Water to Health App</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

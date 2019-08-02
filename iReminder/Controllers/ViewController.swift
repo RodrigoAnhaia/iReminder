@@ -9,6 +9,8 @@ import UIKit
 import UICircularProgressRing
 
 class ViewController: UIViewController {
+    @IBOutlet weak var tripsBathroom: UILabel!
+    @IBOutlet weak var amountDrink: UILabel!
     
     var water = WaterHK()
     
@@ -31,31 +33,27 @@ class ViewController: UIViewController {
     
     @IBAction func addWaterPercentaje(_ sender: UIButton) {
         print("Insere 10% de água..")
+        var amountWater: Int = Int(amountDrink.text!)!
+        amountWater = amountWater + 1
+        amountDrink.text = String(amountWater)
         drinksProgressRing.startProgress(to: drinksProgressRing.currentValue! + 10, duration: 1.0)
+        
     }
     
     
     @IBAction func addTripToBathroom(_ sender: UIButton) {
         print("Insere uma ida ao banheiro..")
-        peeProgressRing.startProgress(to: peeProgressRing.currentValue! + 15, duration: 1.0)
-    }
-    
-    
-    @IBAction func pauseAnimation(_ sender: UICircularProgressRing) {
-        drinksProgressRing.pauseProgress()
-        peeProgressRing.pauseProgress()
-        //print("paused in \(progressRing.currentValue)")
-    }
-    
-    @IBAction func continueAnimation(_ sender: UICircularProgressRing) {
-        drinksProgressRing.continueProgress()
-        peeProgressRing.continueProgress()
-        print("continued..")
+        var trip: Int = Int(tripsBathroom.text!)!
+        trip = trip + 1
+        tripsBathroom.text = String(trip)
+        peeProgressRing.startProgress(to: peeProgressRing.currentValue! + 20, duration: 1.0)
     }
     
     @IBAction func resetProgress(_ sender: UICircularProgressRing) {
         drinksProgressRing.resetProgress()
+        amountDrink.text = "0"
         peeProgressRing.resetProgress()
+        tripsBathroom.text = "0"
         print("reset")
     }
     

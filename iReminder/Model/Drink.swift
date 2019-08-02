@@ -11,4 +11,5 @@ import Foundation
 struct Drinks {
     var typeDrink: String
     var amountDrink: String
+    var hourDrink: String
 }

@@ -15,11 +15,11 @@ class RoutineViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var routineTableView: UITableView!
     var modelRoutine: Routine = Routine(weekday: "", timeToAwake: "", timeToSleep: "")
-    var modelDrinks: [Drinks] = [Drinks(typeDrink: "water", amountDrink: "200 ml"),
-                                 Drinks(typeDrink: "coffee", amountDrink: "240 ml"),
-                                 Drinks(typeDrink: "water", amountDrink: "240 ml"),
-                                 Drinks(typeDrink: "wine", amountDrink: "500 ml"),
-                                 Drinks(typeDrink: "water", amountDrink: "280 ml")]
+    var modelDrinks: [Drinks] = [Drinks(typeDrink: "water", amountDrink: "200 ml",hourDrink: "08:30"),
+                                 Drinks(typeDrink: "coffee", amountDrink: "240 ml", hourDrink: "09:00"),
+                                 Drinks(typeDrink: "water", amountDrink: "240 ml", hourDrink: "13:12"),
+                                 Drinks(typeDrink: "wine", amountDrink: "500 ml", hourDrink: "20:34"),
+                                 Drinks(typeDrink: "water", amountDrink: "280 ml", hourDrink: "21:42")]
     let defaults = UserDefaults.standard
     
     var datePicker: UIDatePicker = UIDatePicker()
@@ -346,6 +346,7 @@ extension RoutineViewController: UITableViewDelegate, UITableViewDataSource {
         let allDrinks = modelDrinks[indexPath.row]
 
         cell?.amountDrink.text = "(\(allDrinks.amountDrink))"
+        cell?.hourDrink.text = allDrinks.hourDrink
         cell?.typeDrink.text = allDrinks.typeDrink
         switch cell?.typeDrink.text {
         case "water":
