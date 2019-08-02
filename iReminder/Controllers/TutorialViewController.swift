@@ -35,8 +35,8 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
     
     //Data for slides
     
-    var titles = ["FAST DELIVERY", "EXCINTING OFFERS", "Connect with your Health Apps", "Choose your activity level" ,"Choose your clime"]
-    var descs = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "This is influence the amount of water to be ingested.","Your type of climate may influence the amount of water to be ingested."]
+    var titles = ["Health Connection", "How do we work?", "Why do we exist?", "Choose your activity level" ,"Choose your clime"]
+    var descs = ["With Health sync, you can use your full Health profile for iReminder. This will allow you to add or edit data directly from Health, making it easier to use the app.", "We will be taking care of how long you should drink water and go to the bathroom. With easy statistics, you will be able to see your daily consumption and past consumptions to see your progress.", "We are an application focused on biological time. We aren't a simple water control app. Our goal is to help everyone, including those with kidney stones problems.", "This is influence the amount of water to be ingested.","Your type of climate may influence the amount of water to be ingested."]
     var imgs = ["intro1", "intro2", "intro3", "actT","lastT"]
 
     //Get dynamic width and height of scrollview and save it
@@ -87,10 +87,10 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
             txt1.font = UIFont.boldSystemFont(ofSize: 20.0)
             txt1.text = titles[index]
             
-            let txt2 = UILabel.init(frame: CGRect(x: 32, y: txt1.frame.maxY+10, width: scrollWidth-64, height: 50))
+            let txt2 = UILabel.init(frame: CGRect(x: 32, y: txt1.frame.maxY+10, width: scrollWidth-64, height: 130))
             
             txt2.textAlignment = .center
-            txt2.numberOfLines = 3
+            txt2.numberOfLines = 60
             txt2.font = UIFont.systemFont(ofSize: 18.0)
             txt2.text = descs[index]
             
@@ -131,7 +131,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
              
                 //Create PickerView and TextField for option Clime
                 let slide = UIView(frame: frame)
-                climeTextField = UITextField(frame: CGRect(x: 32, y: 450, width: scrollWidth-64, height: 40))
+                climeTextField = UITextField(frame: CGRect(x: 32, y: 500, width: scrollWidth-64, height: 40))
                 climePicker = UIPickerView(frame: CGRect(x: 32, y: 80, width: scrollWidth-64, height: 170))
                 
                 
@@ -158,7 +158,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate, UIPickerVi
                 
                 //Create PickerView and TextField for option Active
                 let slide = UIView(frame: frame)
-                activityTextField = UITextField(frame: CGRect(x: 32, y: 450, width: scrollWidth-64, height: 40))
+                activityTextField = UITextField(frame: CGRect(x: 32, y: 500, width: scrollWidth-64, height: 40))
                 activityPicker = UIPickerView(frame: CGRect(x: 32, y: 80, width: scrollWidth-64, height: 170))
                 
                 //Delegate of components for screens

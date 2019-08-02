@@ -25,9 +25,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>TESTE</string>
+	<string>This app wants to use your photos.</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>Able to present past and current information in the App</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app wants to take pictures.</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>Able to log Water to Health App</string>
 	<key>NSPhotoLibraryUsageDescription</key>
