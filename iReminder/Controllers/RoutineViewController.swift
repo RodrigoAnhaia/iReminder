@@ -12,6 +12,7 @@ import UIKit
 
 class RoutineViewController: UIViewController, UITextFieldDelegate {
 
+
     @IBOutlet weak var routineTableView: UITableView!
     var modelRoutine: Routine = Routine(weekday: "", timeToAwake: "", timeToSleep: "")
     var modelDrinks: [Drinks] = [Drinks(typeDrink: "water", amountDrink: "200 ml"),

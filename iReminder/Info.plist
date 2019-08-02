@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -18,10 +20,16 @@
 	<string>1</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>TESTE</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>Able to present past and current information in the App</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>Able to log Water to Health App</string>
 	<key>UILaunchStoryboardName</key>

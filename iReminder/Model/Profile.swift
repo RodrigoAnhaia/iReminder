@@ -9,10 +9,12 @@
 import Foundation
 
 struct Profile {
+    var image: String
     var name: String
     var weight: String
     var height: String
     var age: String
     var biologicalSex: String
-    var image: String
+    var activyLevel: String
+    var clime: String
 }
